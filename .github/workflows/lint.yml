@@ -1,0 +1,19 @@
+name: Lint
+
+on:
+  pull_request_target:
+
+permissions:
+  pull-requests: write
+
+jobs:
+  textlint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: tsuyoshicho/action-textlint@v3
+        with:
+          fail_on_error: true
