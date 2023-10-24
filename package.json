@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "lint": "textlint *.md"
+  },
+  "devDependencies": {
+    "textlint": "^13.3.3",
+    "textlint-rule-preset-ja-technical-writing": "^8.0.0"
+  }
+}
