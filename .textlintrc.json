@@ -1,0 +1,11 @@
+{
+  "plugins": {},
+  "filters": {},
+  "rules": {
+    "textlint-rule-preset-ja-technical-writing": {
+      "max-comma": false,
+      "no-exclamation-question-mark": false,
+      "sentence-length": false
+    }
+  }
+}
