@@ -15,6 +15,11 @@ jobs:
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.head_ref }}
+          submodules: true
+      - name: Setup node/npm
+        uses: actions/setup-node@v1
+        with:
+          node-version: '15'
       - uses: tsuyoshicho/action-textlint@v3
         with:
           fail_on_error: true
