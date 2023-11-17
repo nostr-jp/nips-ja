@@ -1,0 +1,73 @@
+name: Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Sync with upstream
+        id: sync
+        run: |
+          echo ::group::Setting up git and gh
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          gh repo set-default ${{ github.repository }}
+          echo ::endgroup::
+
+          echo ::group::Fetching upstream
+          git remote add upstream https://github.com/nostr-protocol/nips
+          git fetch upstream
+          echo ::endgroup::
+
+          echo ::group::Fetching origin
+          git fetch origin
+          echo ::endgroup::
+
+          echo ::group::Switching to sync branch
+          git switch -c sync
+          git log -1 --format=%H
+          echo ::endgroup::
+
+          echo ::group::Merging upstream to sync branch
+          if ! git merge upstream/master --no-edit --commit -m "Sync with upstream"; then
+            git add -A
+            git commit -m "Sync with upstream including CONFLICT"
+          fi
+          echo ::endgroup::
+
+          if ! git diff --quiet main; then
+            echo "diff_main=1" >> $GITHUB_OUTPUT
+
+            echo ::group::Pushing sync branch
+            git push -f origin sync
+            echo ::endgroup::
+          else
+            echo "diff_main=0" >> $GITHUB_OUTPUT
+            echo "main is in sync with upstream"
+          fi
+
+      - name: Check if sync pull request exists
+        id: sync_pr_existence
+        run: |
+          echo "count=$(gh pr list --head sync --base main | wc -l)" >> $GITHUB_OUTPUT
+
+      - name: Create pull request if needed
+        if: ${{steps.sync_pr_existence.outputs.count == 0 && steps.sync.outputs.diff_main == 1}}
+        run: |
+          gh pr create --head "sync" --base "main" --title "Sync with upstream" --body ""
