@@ -5,7 +5,19 @@
     "textlint-rule-preset-ja-technical-writing": {
       "max-comma": false,
       "no-exclamation-question-mark": false,
-      "sentence-length": false
+      "sentence-length": false,
+      "ja-no-mixed-period": {
+        "allowPeriodMarks": [":"]
+      },
+      "no-mix-dearu-desumasu": {
+        "preferInHeader": "",
+        "preferInBody": "ですます",
+        "preferInList": "ですます",
+        "strict": true
+      }
+    },
+    "preset-ja-spacing": {
+      "ja-no-space-around-parentheses": false
     }
   }
 }
