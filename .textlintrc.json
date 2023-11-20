@@ -14,6 +14,19 @@
         "preferInBody": "ですます",
         "preferInList": "ですます",
         "strict": true
+      },
+      "ja-no-weak-phrase": false,
+      "ja-no-redundant-expression": {
+        "dictOptions": {
+          "dict5": {
+            "allows": [
+              "/^要求を行[ぁ-ん]/",
+              "/^処理を行[ぁ-ん]/",
+              "/^[ァ-ヶ]+を.?行[ぁ-ん]/",
+              "/^[a-zA-Z]+を.?行[ぁ-ん]/"
+            ]
+          }
+        }
       }
     },
     "preset-ja-spacing": {
