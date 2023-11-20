@@ -5,16 +5,25 @@ on:
   schedule:
     - cron: "0 0 * * *"
 
-permissions:
-  pull-requests: write
-  contents: write
-
 jobs:
+  create_token:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    outputs:
+      token: ${{ steps.create.outputs.token }}
+    steps:
+      - uses: tibdex/github-app-token@v2
+        id: create
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
+
   sync:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    needs: create_token
     env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ needs.create_token.outputs.token }}
     steps:
       - uses: actions/checkout@v4
         with:
