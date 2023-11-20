@@ -1,21 +1,16 @@
 {
-  "plugins": {},
   "filters": {},
+  "plugins": {},
   "rules": {
+    "preset-ja-spacing": {
+      "ja-no-space-around-parentheses": false
+    },
     "textlint-rule-preset-ja-technical-writing": {
-      "max-comma": false,
-      "no-exclamation-question-mark": false,
-      "sentence-length": false,
       "ja-no-mixed-period": {
-        "allowPeriodMarks": [":"]
+        "allowPeriodMarks": [
+          ":"
+        ]
       },
-      "no-mix-dearu-desumasu": {
-        "preferInHeader": "",
-        "preferInBody": "ですます",
-        "preferInList": "ですます",
-        "strict": true
-      },
-      "ja-no-weak-phrase": false,
       "ja-no-redundant-expression": {
         "dictOptions": {
           "dict5": {
@@ -27,10 +22,17 @@
             ]
           }
         }
-      }
-    },
-    "preset-ja-spacing": {
-      "ja-no-space-around-parentheses": false
+      },
+      "ja-no-weak-phrase": false,
+      "max-comma": false,
+      "no-exclamation-question-mark": false,
+      "no-mix-dearu-desumasu": {
+        "preferInBody": "ですます",
+        "preferInHeader": "",
+        "preferInList": "ですます",
+        "strict": true
+      },
+      "sentence-length": false
     }
   }
 }
