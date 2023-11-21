@@ -1,23 +1,38 @@
 {
-  "plugins": {},
   "filters": {},
+  "plugins": {},
   "rules": {
-    "textlint-rule-preset-ja-technical-writing": {
-      "max-comma": false,
-      "no-exclamation-question-mark": false,
-      "sentence-length": false,
-      "ja-no-mixed-period": {
-        "allowPeriodMarks": [":"]
-      },
-      "no-mix-dearu-desumasu": {
-        "preferInHeader": "",
-        "preferInBody": "ですます",
-        "preferInList": "ですます",
-        "strict": true
-      }
-    },
     "preset-ja-spacing": {
       "ja-no-space-around-parentheses": false
+    },
+    "textlint-rule-preset-ja-technical-writing": {
+      "ja-no-mixed-period": {
+        "allowPeriodMarks": [
+          ":"
+        ]
+      },
+      "ja-no-redundant-expression": {
+        "dictOptions": {
+          "dict5": {
+            "allows": [
+              "/^要求を行[ぁ-ん]/",
+              "/^処理を行[ぁ-ん]/",
+              "/^[ァ-ヶ]+を.?行[ぁ-ん]/",
+              "/^[a-zA-Z]+を.?行[ぁ-ん]/"
+            ]
+          }
+        }
+      },
+      "ja-no-weak-phrase": false,
+      "max-comma": false,
+      "no-exclamation-question-mark": false,
+      "no-mix-dearu-desumasu": {
+        "preferInBody": "ですます",
+        "preferInHeader": "",
+        "preferInList": "ですます",
+        "strict": true
+      },
+      "sentence-length": false
     }
   }
 }
