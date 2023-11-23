@@ -30,7 +30,7 @@ NIPs日本語訳への貢献に興味をお持ちいただきありがとうご�
 
 Nostrのscrapboxには、NIPsの仮翻訳やNostrについての関連情報が数多くまとめられています。ただし、情報が古い場合もあるので必ず原文をチェックしながら作業してください。
 
-[Nostr scrapbox](https://scrapbox.io/nostr/)
+[Nostr scrapbox](https://scrapbox.io/nostr/NIP)
 
 ### 翻訳・スタイルガイドの問題点の報告
 
