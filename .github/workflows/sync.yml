@@ -22,6 +22,7 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
+          token: ${{ steps.create_token.outputs.token }}
 
       - name: Sync with upstream
         id: sync
@@ -74,7 +75,7 @@ jobs:
           GITHUB_TOKEN: ${{ steps.create_token.outputs.token }}
 
       - name: Create pull request if needed
-        if: ${{steps.sync_pr_existence.outputs.count == 0 && steps.sync.outputs.diff_main == 1}}
+        if: ${{ steps.sync_pr_existence.outputs.count == 0 && steps.sync.outputs.diff_main == 1 }}
         run: |
           gh pr create --head "sync" --base "main" --title "Sync with upstream" --body ""
         env:
