@@ -3,7 +3,7 @@
     "lint": "textlint *.md"
   },
   "devDependencies": {
-    "textlint": "^13.3.3",
+    "textlint": "^13.4.1",
     "textlint-rule-preset-ja-spacing": "^2.3.0",
     "textlint-rule-preset-ja-technical-writing": "^8.0.0"
   }
