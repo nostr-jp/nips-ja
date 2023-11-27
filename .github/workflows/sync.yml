@@ -5,21 +5,24 @@ on:
   schedule:
     - cron: "0 0 * * *"
 
-permissions:
-  pull-requests: write
-  contents: write
+permissions: {}
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - uses: tibdex/github-app-token@v2
+        id: create_token
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
+
       - uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
+          token: ${{ steps.create_token.outputs.token }}
 
       - name: Sync with upstream
         id: sync
@@ -61,13 +64,19 @@ jobs:
             echo "diff_main=0" >> $GITHUB_OUTPUT
             echo "main is in sync with upstream"
           fi
+        env:
+          GITHUB_TOKEN: ${{ steps.create_token.outputs.token }}
 
       - name: Check if sync pull request exists
         id: sync_pr_existence
         run: |
           echo "count=$(gh pr list --head sync --base main | wc -l)" >> $GITHUB_OUTPUT
+        env:
+          GITHUB_TOKEN: ${{ steps.create_token.outputs.token }}
 
       - name: Create pull request if needed
-        if: ${{steps.sync_pr_existence.outputs.count == 0 && steps.sync.outputs.diff_main == 1}}
+        if: ${{ steps.sync_pr_existence.outputs.count == 0 && steps.sync.outputs.diff_main == 1 }}
         run: |
           gh pr create --head "sync" --base "main" --title "Sync with upstream" --body ""
+        env:
+          GITHUB_TOKEN: ${{ steps.create_token.outputs.token }}
