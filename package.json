@@ -1,10 +1,17 @@
 {
   "scripts": {
-    "lint": "textlint *.md"
+    "lint": "textlint *.md",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
     "textlint": "^13.4.1",
     "textlint-rule-preset-ja-spacing": "^2.3.0",
     "textlint-rule-preset-ja-technical-writing": "^8.0.0"
+  },
+  "lint-staged": {
+    "*.md": "textlint"
   }
 }
