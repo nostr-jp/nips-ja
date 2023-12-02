@@ -38,7 +38,6 @@ They exist to document what may be implemented by [Nostr](https://github.com/nos
 - [NIP-18: Reposts](18.md)
 - [NIP-19: bech32-encoded entities](19.md)
 - [NIP-21: `nostr:` URI scheme](21.md)
-- [NIP-22: Event `created_at` Limits](22.md)
 - [NIP-23: Long-form Content](23.md)
 - [NIP-24: Extra metadata fields and tags](24.md)
 - [NIP-25: Reactions](25.md)
@@ -184,7 +183,6 @@ Please update these lists when proposing NIPs introducing new event kinds.
 | `p`               | pubkey (hex)                         | relay URL, petname   | [01](01.md), [02](02.md)              |
 | `a`               | coordinates to an event              | relay URL            | [01](01.md)                           |
 | `d`               | identifier                           | --                   | [01](01.md)                           |
-| `alt`             | summary                              | --                   | [31](31.md)                           |
 | `g`               | geohash                              | --                   | [52](52.md)                           |
 | `i`               | identity                             | proof                | [39](39.md)                           |
 | `k`               | kind number (string)                 | --                   | [18](18.md), [25](25.md), [72](72.md) |
@@ -194,13 +192,16 @@ Please update these lists when proposing NIPs introducing new event kinds.
 | `r`               | a reference (URL, etc)               | petname              |                                       |
 | `r`               | relay url                            | marker               | [65](65.md)                           |
 | `t`               | hashtag                              | --                   |                                       |
+| `alt`             | summary                              | --                   | [31](31.md)                           |
 | `amount`          | millisatoshis, stringified           | --                   | [57](57.md)                           |
 | `bolt11`          | `bolt11` invoice                     | --                   | [57](57.md)                           |
 | `challenge`       | challenge string                     | --                   | [42](42.md)                           |
+| `client`          | name, address                        | relay URL            | [89](89.md)                           |
 | `content-warning` | reason                               | --                   | [36](36.md)                           |
 | `delegation`      | pubkey, conditions, delegation token | --                   | [26](26.md)                           |
 | `description`     | invoice/badge description            | --                   | [57](57.md), [58](58.md)              |
 | `emoji`           | shortcode, image URL                 | --                   | [30](30.md)                           |
+| `encrypted`       | --                                   | --                   | [90](90.md)                           |
 | `expiration`      | unix timestamp (string)              | --                   | [40](40.md)                           |
 | `goal`            | event id (hex)                       | relay URL            | [75](75.md)                           |
 | `image`           | image URL                            | dimensions in pixels | [23](23.md), [58](58.md)              |
