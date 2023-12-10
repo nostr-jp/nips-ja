@@ -22,7 +22,7 @@ They exist to document what may be implemented by [Nostr](https://github.com/nos
 ## List
 
 - [NIP-01: Basic protocol flow description](01.md)
-- [NIP-02: Contact List and Petnames](02.md)
+- [NIP-02: Follow List](02.md)
 - [NIP-03: OpenTimestamps Attestations for Events](03.md)
 - [NIP-04: Encrypted Direct Message](04.md)
 - [NIP-05: Mapping Nostr keys to DNS-based internet identifiers](05.md)
@@ -80,7 +80,7 @@ They exist to document what may be implemented by [Nostr](https://github.com/nos
 | `0`           | Metadata                   | [1](01.md)               |
 | `1`           | Short Text Note            | [1](01.md)               |
 | `2`           | Recommend Relay            |                          |
-| `3`           | Contacts                   | [2](02.md)               |
+| `3`           | Follows                    | [2](02.md)               |
 | `4`           | Encrypted Direct Messages  | [4](04.md)               |
 | `5`           | Event Deletion             | [9](09.md)               |
 | `6`           | Repost                     | [18](18.md)              |
@@ -172,6 +172,7 @@ They exist to document what may be implemented by [Nostr](https://github.com/nos
 | `EVENT`  | used to send events requested to clients                | [01](01.md) |
 | `NOTICE` | used to send human-readable messages to clients         | [01](01.md) |
 | `OK`     | used to notify clients if an EVENT was successful       | [01](01.md) |
+| `CLOSED` | used to notify clients that a REQ was ended and why     | [01](01.md) |
 | `AUTH`   | used to send authentication challenges                  | [42](42.md) |
 | `COUNT`  | used to send requested event counts to clients          | [45](45.md) |
 
