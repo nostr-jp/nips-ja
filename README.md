@@ -55,7 +55,7 @@ They exist to document what may be implemented by [Nostr](https://github.com/nos
 - [NIP-45: Counting results](45.md)
 - [NIP-46: Nostrコネクト](46.md)
 - [NIP-47: Wallet Connect](47.md)
-- [NIP-48: Proxy Tags](48.md)
+- [NIP-48: プロキシタグ](48.md)
 - [NIP-50: 検索機能](50.md)
 - [NIP-51: Lists](51.md)
 - [NIP-52: Calendar Events](52.md)
