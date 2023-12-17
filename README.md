@@ -44,7 +44,7 @@ They exist to document what may be implemented by [Nostr](https://github.com/nos
 - [NIP-26: イベント署名の委任](26.md)
 - [NIP-27: Text Note References](27.md)
 - [NIP-28: Public Chat](28.md)
-- [NIP-30: Custom Emoji](30.md)
+- [NIP-30: カスタム絵文字](30.md)
 - [NIP-31: Dealing with Unknown Events](31.md)
 - [NIP-32: Labeling](32.md)
 - [NIP-36: センシティブコンテンツ / コンテンツの警告](36.md)
