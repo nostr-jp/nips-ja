@@ -40,7 +40,7 @@ They exist to document what may be implemented by [Nostr](https://github.com/nos
 - [NIP-21: `nostr:` URI scheme](21.md)
 - [NIP-23: 長文投稿](23.md)
 - [NIP-24: 追加のメタデータフィールドとタグ](24.md)
-- [NIP-25: Reactions](25.md)
+- [NIP-25: リアクション](25.md)
 - [NIP-26: イベント署名の委任](26.md)
 - [NIP-27: Text Note References](27.md)
 - [NIP-28: Public Chat](28.md)
