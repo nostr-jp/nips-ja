@@ -6,15 +6,15 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 
 ---
 
-- [仕様一覧](#list)
-- [イベント種別(kind)](#event-kinds)
-- [メッセージ型](#message-types)
-  - [クライアントからリレーへ](#client-to-relay)
-  - [リレーからクライアントへ](#relay-to-client)
-- [標準化済みタグ](#standardized-tags)
-- [NIPsの受け入れ基準](#criteria-for-acceptance-of-nips)
-- [このリポジトリは中央集権的な要素ではありませんか？](#is-this-repository-a-centralizing-factor)
-- [このリポジトリの仕組み](#how-this-repository-works)
+- [仕様一覧](#仕様一覧)
+- [イベント種別(kind)](#イベント種別(kind))
+- [メッセージ型](#メッセージ型)
+  - [クライアントからリレーへ](#クライアントからリレーへ)
+  - [リレーからクライアントへ](#リレーからクライアントへ)
+- [標準化済みタグ](#標準化済みタグ)
+- [NIPsの受け入れ基準](#NIPsの受け入れ基準)
+- [このリポジトリは中央集権的な要素ではありませんか？](#このリポジトリは中央集権的な要素ではありませんか？)
+- [このリポジトリの仕組み](#このリポジトリの仕組み)
 - [License](#license)
 
 ---
@@ -29,7 +29,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-06: ニーモニックシードフレーズからの基本的な鍵導出](06.md)
 - [NIP-07: Web ブラウザ向け`window.nostr`機能](07.md)
 - [NIP-08: メンションへの対応](08.md) --- **非推奨**: [NIP-27](27.md)で代替されたため廃止
-- [NIP-09: イベント削除](09.md)
+- [NIP-09: イベント(の)削除](09.md)
 - [NIP-10: テキストイベントにおいて`e`タグおよび`p`タグを使用する際の規約](10.md)
 - [NIP-11: リレー情報ドキュメント](11.md)
 - [NIP-13: Proof of Work](13.md)
@@ -103,7 +103,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `6000`-`6999` | ジョブ結果                      | [90](90.md)              |
 | `7000`        | ジョブフィードバック            | [90](90.md)              |
 | `9041`        | Zap Goal                        | [75](75.md)              |
-| `9734`        | Zap 要求                        | [57](57.md)              |
+| `9734`        | Zap要求         　              | [57](57.md)              |
 | `9735`        | Zap                             | [57](57.md)              |
 | `9802`        | ハイライト                      | [84](84.md)              |
 | `10000`       | ミュートリスト                  | [51](51.md)              |
@@ -116,13 +116,13 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `10007`       | 検索リレーリスト                | [51](51.md)              |
 | `10015`       | 興味・関心リスト                | [51](51.md)              |
 | `10030`       | ユーザー絵文字リスト            | [51](51.md)              |
-| `13194`       | ウォレット 情報                 | [47](47.md)              |
+| `13194`       | ウォレット情報             　   | [47](47.md)              |
 | `21000`       | Lightning Pub RPC               | [Lightning.Pub][lnpub]   |
 | `22242`       | クライアント認証                | [42](42.md)              |
-| `23194`       | ウォレット 要求                 | [47](47.md)              |
-| `23195`       | ウォレット 応答                 | [47](47.md)              |
+| `23194`       | ウォレット要求             　   | [47](47.md)              |
+| `23195`       | ウォレット応答             　   | [47](47.md)              |
 | `24133`       | Nostr Connect                   | [46](46.md)              |
-| `27235`       | HTTP 認証                       | [98](98.md)              |
+| `27235`       | HTTP認証                        | [98](98.md)              |
 | `30000`       | フォローセット                  | [51](51.md)              |
 | `30001`       | 汎用リスト                      | [51](51.md)              |
 | `30002`       | リレーセット                    | [51](51.md)              |
@@ -207,7 +207,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `encrypted`       | --                                   | --                   | [90](90.md)                           |
 | `expiration`      | unix timestamp (string)              | --                   | [40](40.md)                           |
 | `goal`            | イベントID (hex)                     | relay URL            | [75](75.md)                           |
-| `image`           | 画像 URL                             | dimensions in pixels | [23](23.md), [58](58.md)              |
+| `image`           | 画像URL               　             | dimensions in pixels | [23](23.md), [58](58.md)              |
 | `lnurl`           | `bech32` encoded `lnurl`             | --                   | [57](57.md)                           |
 | `location`        | 場所文字列                           | --                   | [52](52.md), [99](99.md)              |
 | `name`            | バッジの名前                         | --                   | [58](58.md)                           |
