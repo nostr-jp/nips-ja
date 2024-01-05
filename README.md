@@ -27,7 +27,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-04: 暗号化されたダイレクトメッセージ](04.md)
 - [NIP-05: Nostr鍵をDNSベースのインターネット識別子に結びつける](05.md)
 - [NIP-06: ニーモニックシードフレーズからの基本的な鍵導出](06.md)
-- [NIP-07: web browsers向け`window.nostr`機能](07.md)
+- [NIP-07: Web ブラウザ向け`window.nostr`機能](07.md)
 - [NIP-08: メンションへの対応](08.md) --- **非推奨**: [NIP-27](27.md)で代替されたため廃止
 - [NIP-09: イベント削除](09.md)
 - [NIP-10: テキストイベントにおいて`e`タグおよび`p`タグを使用する際の規約](10.md)
