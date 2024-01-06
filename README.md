@@ -24,7 +24,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-01: 基本的なプロトコルフローの説明](01.md)
 - [NIP-02: フォローリスト](02.md)
 - [NIP-03: イベントに対するOpenTimestamps認証](03.md)
-- [NIP-04: 暗号化されたダイレクトメッセージ](04.md)
+- [NIP-04: 暗号化されたダイレクトメッセージ](04.md) --- **非推奨**: [NIP-44](44.md)で代替されたため廃止
 - [NIP-05: Nostr鍵をDNSベースのインターネット識別子に結びつける](05.md)
 - [NIP-06: ニーモニックシードフレーズからの基本的な鍵導出](06.md)
 - [NIP-07: Web ブラウザ向け`window.nostr`機能](07.md)
@@ -52,6 +52,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-39: プロフィールにおける外部アイデンティティ](39.md)
 - [NIP-40: 有効期限タイムスタンプ](40.md)
 - [NIP-42: リレーに対するクライアントの認証](42.md)
+- [NIP-44: バージョンつき暗号化](44.md)
 - [NIP-45: イベント計数](45.md)
 - [NIP-46: Nostrコネクト](46.md)
 - [NIP-47: Wallet Connect](47.md)
