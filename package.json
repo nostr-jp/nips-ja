@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "lint": "textlint *.md",
+    "lint": "textlint .",
     "lint-staged": "lint-staged",
     "prepare": "husky install"
   },
