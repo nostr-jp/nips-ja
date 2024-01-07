@@ -27,9 +27,9 @@
       "max-comma": false,
       "no-exclamation-question-mark": false,
       "no-mix-dearu-desumasu": {
-        "preferInBody": "ですます",
+        "preferInBody": "である",
         "preferInHeader": "",
-        "preferInList": "ですます",
+        "preferInList": "である",
         "strict": true
       },
       "sentence-length": false
