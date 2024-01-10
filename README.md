@@ -37,7 +37,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-15: Nostr Marketplace (for resilient marketplaces)](15.md)
 - [NIP-18: リポスト](18.md)
 - [NIP-19: bech32でエンコードされた情報](19.md)
-- [NIP-21: `nostr:` URI scheme](21.md)
+- [NIP-21: `nostr:` URIスキーム](21.md)
 - [NIP-23: 長文投稿](23.md)
 - [NIP-24: 追加のメタデータフィールドとタグ](24.md)
 - [NIP-25: リアクション](25.md)
