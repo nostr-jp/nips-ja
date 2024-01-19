@@ -221,7 +221,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `published_at`    | unix timestamp (string)              | --                   | [23](23.md)                           |
 | `relay`           | リレーURL                            | --                   | [42](42.md)                           |
 | `relays`          | リレーリスト                         | --                   | [57](57.md)                           |
-| `server`          | サーバーURL                          | --                   | [96](96.md)                           |
+| `server`          | ファイルストレージサーバーURL        | --                   | [96](96.md)                           |
 | `subject`         | 件名                                 | --                   | [14](14.md)                           |
 | `summary`         | 記事の要約                           | --                   | [23](23.md)                           |
 | `thumb`           | バッジサムネイル                     | dimensions in pixels | [58](58.md)                           |
