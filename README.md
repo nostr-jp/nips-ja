@@ -238,21 +238,21 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 
 ## このリポジトリは中央集権的な要素ではありませんか？
 
-To promote interoperability, we standards that everybody can follow, and we need them to define a **single way of doing each thing** without ever hurting **backwards-compatibility**, and for that purpose there is no way around getting everybody to agree on the same thing and keep a centralized index of these standards. However the fact that such index exists doesn't hurt the decentralization of Nostr. _At any point the central index can be challenged if it is failing to fulfill the needs of the protocol_ and it can migrate to other places and be maintained by other people.
+相互運用性を向上させるために誰もが従える標準を作成し、**後方互換性**を損なうことなく**物事を行うための1つの方法**を定義する必要がある。この目的のためには誰もが同じことに同意し、それら標準の中央集権型の目録を保持すること以外に道は無い。しかし、そのような目録があるからといってNostrの分散性が損なわれることはない。_中央の目録がプロトコルの要求を満たせない場合はいつでも異議を唱えることができ_、他の場所に移行して他の人がメンテナンスすることもできる。
 
-It can even fork into multiple and then some clients would go one way, others would go another way, and some clients would adhere to both competing standards. This would hurt the simplicity, openness and interoperability of Nostr a little, but everything would still work in the short term.
+フォークされ複数に分かれることも可能で、その際はあるクライアントは一方に、別のクライアントはもう一方に、またあるクライアントは競合する両方の標準に準拠することとなる。それはNostrの単純さ、開放性、相互運用性を少し損なうこととなるが、それでも短期的には全て機能するだろう。
 
-There is a list of notable Nostr software developers who have commit access to this repository, but that exists mostly for practical reasons, as by the nature of the thing we're dealing with the repository owner can revoke membership and rewrite history as they want -- and if these actions are unjustified or perceived as bad or evil the community must react.
+このリポジトリへのコミット権を持っている著名なNostrソフトウェア開発者のリストがあるが、それはほとんど実用上の理由から存在している。私達が扱っているものの性質上、リポジトリの所有者はメンバーシップを取り消したり好きなように歴史を書き換えることができる。そして、それらの行為が不当であったり、悪事や邪悪なものと認識される場合、コミュニティは抗議の声を上げなければならない。
 
 ## このリポジトリの仕組み
 
-Standards may emerge in two ways: the first way is that someone starts doing something, then others copy it; the second way is that someone has an idea of a new standard that could benefit multiple clients and the protocol in general without breaking **backwards-compatibility** and the principle of having **a single way of doing things**, then they write that idea and submit it to this repository, other interested parties read it and give their feedback, then once most people reasonably agree we codify that in a NIP which client and relay developers that are interested in the feature can proceed to implement.
+標準は2つの方法で作られる。1つは誰かがなにかを始め、他の人がそれを書き写すという方法である。2つ目は、**物事を行うための1つの方法**を持つという原則と**後方互換性**を壊すことなく複数のクライアントとプロトコル全般に利益をもたらす新しい標準のアイデアを持つ誰かがそれを書いてこのリポジトリに提出し、他の利害関係者がそれを読んでフィードバックし、ほとんどの人が合理的に同意したらその機能に関心のあるクライアントとリレーの開発者が実装に取り掛かることのできるNIPに成文化するという方法である。
 
-These two ways of standardizing things are supported by this repository. Although the second is preferred, an effort will be made to codify standards emerged outside this repository into NIPs that can be later referenced and easily understood and implemented by others -- but obviously as in any human system discretion may be applied when standards are considered harmful.
+物事を標準化するためにこれら2つの方法がこのリポジトリでサポートされている。後者が望ましいが、このリポジトリの外で出現した標準をNIPに成文化し、後の人が参照して簡単に理解し実装できるようにする取り組みも行われる。しかし、他の人間のシステムと同様に、標準が有害であると考えられる場合に裁量が行われることは明らかである。
 
-## License
+## ライセンス
 
-All NIPs are public domain.
+全てのNIPsはパブリックドメインである。
 
 ## Contributors
 
