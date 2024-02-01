@@ -5,7 +5,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "husky": "^8.0.3",
+    "husky": "^9.0.7",
     "lint-staged": "^15.2.0",
     "textlint": "^13.4.1",
     "textlint-rule-preset-ja-spacing": "^2.3.0",
