@@ -56,6 +56,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-45: イベント計数](45.md)
 - [NIP-46: Nostrコネクト](46.md)
 - [NIP-47: Wallet Connect](47.md)
+<<<<<<< HEAD
 - [NIP-48: プロキシタグ](48.md)
 - [NIP-50: 検索機能](50.md)
 - [NIP-51: リスト](51.md)
@@ -151,6 +152,110 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `31989`       | 推奨ハンドラ                    | [89](89.md)              |
 | `31990`       | ハンドラ情報                    | [89](89.md)              |
 | `34550`       | Community Definition            | [72](72.md)              |
+=======
+- [NIP-48: Proxy Tags](48.md)
+- [NIP-49: Private Key Encryption](49.md)
+- [NIP-50: Search Capability](50.md)
+- [NIP-51: Lists](51.md)
+- [NIP-52: Calendar Events](52.md)
+- [NIP-53: Live Activities](53.md)
+- [NIP-56: Reporting](56.md)
+- [NIP-57: Lightning Zaps](57.md)
+- [NIP-58: Badges](58.md)
+- [NIP-59: Gift Wrap](59.md)
+- [NIP-65: Relay List Metadata](65.md)
+- [NIP-72: Moderated Communities](72.md)
+- [NIP-75: Zap Goals](75.md)
+- [NIP-78: Application-specific data](78.md)
+- [NIP-84: Highlights](84.md)
+- [NIP-89: Recommended Application Handlers](89.md)
+- [NIP-90: Data Vending Machines](90.md)
+- [NIP-92: Media Attachments](92.md)
+- [NIP-94: File Metadata](94.md)
+- [NIP-96: HTTP File Storage Integration](96.md)
+- [NIP-98: HTTP Auth](98.md)
+- [NIP-99: Classified Listings](99.md)
+
+## Event Kinds
+| kind          | description                | NIP                      |
+| ------------- | -------------------------- | ------------------------ |
+| `0`           | Metadata                   | [01](01.md)              |
+| `1`           | Short Text Note            | [01](01.md)              |
+| `2`           | Recommend Relay            | 01 (deprecated)          |
+| `3`           | Follows                    | [02](02.md)              |
+| `4`           | Encrypted Direct Messages  | [04](04.md)              |
+| `5`           | Event Deletion             | [09](09.md)              |
+| `6`           | Repost                     | [18](18.md)              |
+| `7`           | Reaction                   | [25](25.md)              |
+| `8`           | Badge Award                | [58](58.md)              |
+| `16`          | Generic Repost             | [18](18.md)              |
+| `40`          | Channel Creation           | [28](28.md)              |
+| `41`          | Channel Metadata           | [28](28.md)              |
+| `42`          | Channel Message            | [28](28.md)              |
+| `43`          | Channel Hide Message       | [28](28.md)              |
+| `44`          | Channel Mute User          | [28](28.md)              |
+| `1021`        | Bid                        | [15](15.md)              |
+| `1022`        | Bid confirmation           | [15](15.md)              |
+| `1040`        | OpenTimestamps             | [03](03.md)              |
+| `1063`        | File Metadata              | [94](94.md)              |
+| `1311`        | Live Chat Message          | [53](53.md)              |
+| `1971`        | Problem Tracker            | [nostrocket][nostrocket] |
+| `1984`        | Reporting                  | [56](56.md)              |
+| `1985`        | Label                      | [32](32.md)              |
+| `4550`        | Community Post Approval    | [72](72.md)              |
+| `5000`-`5999` | Job Request                | [90](90.md)              |
+| `6000`-`6999` | Job Result                 | [90](90.md)              |
+| `7000`        | Job Feedback               | [90](90.md)              |
+| `9041`        | Zap Goal                   | [75](75.md)              |
+| `9734`        | Zap Request                | [57](57.md)              |
+| `9735`        | Zap                        | [57](57.md)              |
+| `9802`        | Highlights                 | [84](84.md)              |
+| `10000`       | Mute list                  | [51](51.md)              |
+| `10001`       | Pin list                   | [51](51.md)              |
+| `10002`       | Relay List Metadata        | [65](65.md)              |
+| `10003`       | Bookmark list              | [51](51.md)              |
+| `10004`       | Communities list           | [51](51.md)              |
+| `10005`       | Public chats list          | [51](51.md)              |
+| `10006`       | Blocked relays list        | [51](51.md)              |
+| `10007`       | Search relays list         | [51](51.md)              |
+| `10015`       | Interests list             | [51](51.md)              |
+| `10030`       | User emoji list            | [51](51.md)              |
+| `10096`       | File storage server list   | [96](96.md)              |
+| `13194`       | Wallet Info                | [47](47.md)              |
+| `21000`       | Lightning Pub RPC          | [Lightning.Pub][lnpub]   |
+| `22242`       | Client Authentication      | [42](42.md)              |
+| `23194`       | Wallet Request             | [47](47.md)              |
+| `23195`       | Wallet Response            | [47](47.md)              |
+| `24133`       | Nostr Connect              | [46](46.md)              |
+| `27235`       | HTTP Auth                  | [98](98.md)              |
+| `30000`       | Follow sets                | [51](51.md)              |
+| `30001`       | Generic lists              | [51](51.md)              |
+| `30002`       | Relay sets                 | [51](51.md)              |
+| `30003`       | Bookmark sets              | [51](51.md)              |
+| `30004`       | Curation sets              | [51](51.md)              |
+| `30008`       | Profile Badges             | [58](58.md)              |
+| `30009`       | Badge Definition           | [58](58.md)              |
+| `30015`       | Interest sets              | [51](51.md)              |
+| `30017`       | Create or update a stall   | [15](15.md)              |
+| `30018`       | Create or update a product | [15](15.md)              |
+| `30019`       | Marketplace UI/UX          | [15](15.md)              |
+| `30020`       | Product sold as an auction | [15](15.md)              |
+| `30023`       | Long-form Content          | [23](23.md)              |
+| `30024`       | Draft Long-form Content    | [23](23.md)              |
+| `30030`       | Emoji sets                 | [51](51.md)              |
+| `30078`       | Application-specific Data  | [78](78.md)              |
+| `30311`       | Live Event                 | [53](53.md)              |
+| `30315`       | User Statuses              | [38](38.md)              |
+| `30402`       | Classified Listing         | [99](99.md)              |
+| `30403`       | Draft Classified Listing   | [99](99.md)              |
+| `31922`       | Date-Based Calendar Event  | [52](52.md)              |
+| `31923`       | Time-Based Calendar Event  | [52](52.md)              |
+| `31924`       | Calendar                   | [52](52.md)              |
+| `31925`       | Calendar Event RSVP        | [52](52.md)              |
+| `31989`       | Handler recommendation     | [89](89.md)              |
+| `31990`       | Handler information        | [89](89.md)              |
+| `34550`       | Community Definition       | [72](72.md)              |
+>>>>>>> upstream/master
 
 [nostrocket]: https://github.com/nostrocket/NIPS/blob/main/Problems.md
 [lnpub]: https://github.com/shocknet/Lightning.Pub/blob/master/proto/autogenerated/client.md
@@ -209,8 +314,14 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `emoji`           | ショートコード, 画像 URL             | --                   | [30](30.md)                           |
 | `encrypted`       | --                                   | --                   | [90](90.md)                           |
 | `expiration`      | unix timestamp (string)              | --                   | [40](40.md)                           |
+<<<<<<< HEAD
 | `goal`            | イベントID (hex)                     | relay URL            | [75](75.md)                           |
 | `image`           | 画像URL               　             | dimensions in pixels | [23](23.md), [58](58.md)              |
+=======
+| `goal`            | event id (hex)                       | relay URL            | [75](75.md)                           |
+| `image`           | image URL                            | dimensions in pixels | [23](23.md), [58](58.md)              |
+| `imeta`           | inline metadata                      | --                   | [92](92.md)                           |
+>>>>>>> upstream/master
 | `lnurl`           | `bech32` encoded `lnurl`             | --                   | [57](57.md)                           |
 | `location`        | 場所文字列                           | --                   | [52](52.md), [99](99.md)              |
 | `name`            | バッジの名前                         | --                   | [58](58.md)                           |
