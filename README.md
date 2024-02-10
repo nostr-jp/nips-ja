@@ -57,7 +57,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-46: Nostrコネクト](46.md)
 - [NIP-47: Wallet Connect](47.md)
 - [NIP-48: プロキシタグ](48.md)
-- [NIP-49: Private Key Encryption](49.md)
+- [NIP-49: 秘密鍵暗号化](49.md)
 - [NIP-50: 検索機能](50.md)
 - [NIP-51: リスト](51.md)
 - [NIP-52: カレンダーイベント](52.md)
