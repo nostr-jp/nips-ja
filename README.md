@@ -57,6 +57,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-46: Nostrコネクト](46.md)
 - [NIP-47: Wallet Connect](47.md)
 - [NIP-48: プロキシタグ](48.md)
+- [NIP-49: Private Key Encryption](49.md)
 - [NIP-50: 検索機能](50.md)
 - [NIP-51: リスト](51.md)
 - [NIP-52: カレンダーイベント](52.md)
@@ -64,6 +65,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-56: 通報](56.md)
 - [NIP-57: Lightning Zaps](57.md)
 - [NIP-58: バッジ](58.md)
+- [NIP-59: Gift Wrap](59.md)
 - [NIP-65: リレーリストメタデータ](65.md)
 - [NIP-72: Moderated Communities](72.md)
 - [NIP-75: Zap Goals](75.md)
@@ -71,6 +73,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-84: ハイライト](84.md)
 - [NIP-89: 推奨アプリケーションハンドラ](89.md)
 - [NIP-90: データ自動販売機](90.md)
+- [NIP-92: Media Attachments](92.md)
 - [NIP-94: ファイルメタデータ](94.md)
 - [NIP-96: HTTPファイルストレージインテグレーション](96.md)
 - [NIP-98: HTTP認証](98.md)
@@ -94,6 +97,8 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `42`          | チャンネルメッセージ            | [28](28.md)              |
 | `43`          | チャンネル投稿ミュート          | [28](28.md)              |
 | `44`          | チャンネルユーザミュート        | [28](28.md)              |
+| `1021`        | Bid                        | [15](15.md)              |
+| `1022`        | Bid confirmation           | [15](15.md)              |
 | `1040`        | OpenTimestamps                  | [03](03.md)              |
 | `1063`        | ファイルメタデータ              | [94](94.md)              |
 | `1311`        | ライブチャットメッセージ        | [53](53.md)              |
@@ -136,6 +141,8 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `30015`       | 興味・関心セット                | [51](51.md)              |
 | `30017`       | Create or update a stall        | [15](15.md)              |
 | `30018`       | Create or update a product      | [15](15.md)              |
+| `30019`       | Marketplace UI/UX          | [15](15.md)              |
+| `30020`       | Product sold as an auction | [15](15.md)              |
 | `30023`       | 長文投稿                        | [23](23.md)              |
 | `30024`       | 長文投稿の下書き                | [23](23.md)              |
 | `30030`       | 絵文字セット                    | [51](51.md)              |
@@ -211,6 +218,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `expiration`      | unix timestamp (string)              | --                   | [40](40.md)                           |
 | `goal`            | イベントID (hex)                     | relay URL            | [75](75.md)                           |
 | `image`           | 画像URL               　             | dimensions in pixels | [23](23.md), [58](58.md)              |
+| `imeta`           | インラインメタデータ                      | --                   | [92](92.md)                           |
 | `lnurl`           | `bech32` encoded `lnurl`             | --                   | [57](57.md)                           |
 | `location`        | 場所文字列                           | --                   | [52](52.md), [99](99.md)              |
 | `name`            | バッジの名前                         | --                   | [58](58.md)                           |
