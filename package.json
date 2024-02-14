@@ -2,7 +2,7 @@
   "scripts": {
     "lint": "textlint .",
     "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "devDependencies": {
     "husky": "^9.0.7",
