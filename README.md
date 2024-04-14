@@ -6,7 +6,6 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 
 ---
 
-<<<<<<< HEAD
 - [仕様一覧](#仕様一覧)
 - [イベント種別(kind)](#イベント種別kind)
 - [メッセージ型](#メッセージ型)
@@ -16,19 +15,8 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIPsの受け入れ基準](#NIPsの受け入れ基準)
 - [このリポジトリは中央集権的な要素ではありませんか？](#このリポジトリは中央集権的な要素ではありませんか)
 - [このリポジトリの仕組み](#このリポジトリの仕組み)
-=======
-- [List](#list)
-- [Event Kinds](#event-kinds)
-- [Message Types](#message-types)
-  - [Client to Relay](#client-to-relay)
-  - [Relay to Client](#relay-to-client)
-- [Standardized Tags](#standardized-tags)
-- [Criteria for acceptance of NIPs](#criteria-for-acceptance-of-nips)
-- [Is this repository a centralizing factor?](#is-this-repository-a-centralizing-factor)
-- [How this repository works](#how-this-repository-works)
-- [Breaking Changes](#breaking-changes)
->>>>>>> upstream/master
-- [License](#license)
+- [破壊的変更](#破壊的変更)
+- [ライセンス](#ライセンス)
 
 ---
 
@@ -48,7 +36,6 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-13: Proof of Work](13.md)
 - [NIP-14: テキストイベントにおける件名タグ](14.md)
 - [NIP-15: Nostr Marketplace (for resilient marketplaces)](15.md)
-<<<<<<< HEAD
 - [NIP-18: リポスト](18.md)
 - [NIP-19: bech32でエンコードされた情報](19.md)
 - [NIP-21: `nostr:` URIスキーム](21.md)
@@ -58,9 +45,11 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-26: イベント署名の委任](26.md)
 - [NIP-27: テキストノートへの参照](27.md)
 - [NIP-28: パブリックチャット](28.md)
+- [NIP-29: リレーに基づくグループ](29.md)
 - [NIP-30: カスタム絵文字](30.md)
 - [NIP-31: 未知のイベントに対する対処法](31.md)
 - [NIP-32: ラベル付け](32.md)
+- [NIP-34: `git` のもの](34.md)
 - [NIP-36: センシティブコンテンツ / コンテンツの警告](36.md)
 - [NIP-38: ユーザーステータス](38.md)
 - [NIP-39: プロフィールにおける外部アイデンティティ](39.md)
@@ -69,30 +58,6 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-44: バージョンつき暗号化](44.md)
 - [NIP-45: イベント計数](45.md)
 - [NIP-46: Nostrコネクト](46.md)
-=======
-- [NIP-18: Reposts](18.md)
-- [NIP-19: bech32-encoded entities](19.md)
-- [NIP-21: `nostr:` URI scheme](21.md)
-- [NIP-23: Long-form Content](23.md)
-- [NIP-24: Extra metadata fields and tags](24.md)
-- [NIP-25: Reactions](25.md)
-- [NIP-26: Delegated Event Signing](26.md)
-- [NIP-27: Text Note References](27.md)
-- [NIP-28: Public Chat](28.md)
-- [NIP-29: Relay-based Groups](29.md)
-- [NIP-30: Custom Emoji](30.md)
-- [NIP-31: Dealing with Unknown Events](31.md)
-- [NIP-32: Labeling](32.md)
-- [NIP-34: `git` stuff](34.md)
-- [NIP-36: Sensitive Content](36.md)
-- [NIP-38: User Statuses](38.md)
-- [NIP-39: External Identities in Profiles](39.md)
-- [NIP-40: Expiration Timestamp](40.md)
-- [NIP-42: Authentication of clients to relays](42.md)
-- [NIP-44: Versioned Encryption](44.md)
-- [NIP-45: Counting results](45.md)
-- [NIP-46: Nostr Connect](46.md)
->>>>>>> upstream/master
 - [NIP-47: Wallet Connect](47.md)
 - [NIP-48: プロキシタグ](48.md)
 - [NIP-49: 秘密鍵暗号化](49.md)
@@ -428,11 +393,11 @@ Standards may emerge in two ways: the first way is that someone starts doing som
 
 These two ways of standardizing things are supported by this repository. Although the second is preferred, an effort will be made to codify standards emerged outside this repository into NIPs that can be later referenced and easily understood and implemented by others -- but obviously as in any human system discretion may be applied when standards are considered harmful.
 
-## Breaking Changes
+## 破壊的変更
 
 [Breaking Changes](BREAKING.md)
 
-## License
+## ライセンス
 
 All NIPs are public domain.
 
