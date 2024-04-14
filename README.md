@@ -6,6 +6,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 
 ---
 
+<<<<<<< HEAD
 - [仕様一覧](#仕様一覧)
 - [イベント種別(kind)](#イベント種別kind)
 - [メッセージ型](#メッセージ型)
@@ -15,6 +16,18 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIPsの受け入れ基準](#NIPsの受け入れ基準)
 - [このリポジトリは中央集権的な要素ではありませんか？](#このリポジトリは中央集権的な要素ではありませんか)
 - [このリポジトリの仕組み](#このリポジトリの仕組み)
+=======
+- [List](#list)
+- [Event Kinds](#event-kinds)
+- [Message Types](#message-types)
+  - [Client to Relay](#client-to-relay)
+  - [Relay to Client](#relay-to-client)
+- [Standardized Tags](#standardized-tags)
+- [Criteria for acceptance of NIPs](#criteria-for-acceptance-of-nips)
+- [Is this repository a centralizing factor?](#is-this-repository-a-centralizing-factor)
+- [How this repository works](#how-this-repository-works)
+- [Breaking Changes](#breaking-changes)
+>>>>>>> upstream/master
 - [License](#license)
 
 ---
@@ -35,6 +48,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-13: Proof of Work](13.md)
 - [NIP-14: テキストイベントにおける件名タグ](14.md)
 - [NIP-15: Nostr Marketplace (for resilient marketplaces)](15.md)
+<<<<<<< HEAD
 - [NIP-18: リポスト](18.md)
 - [NIP-19: bech32でエンコードされた情報](19.md)
 - [NIP-21: `nostr:` URIスキーム](21.md)
@@ -55,6 +69,30 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-44: バージョンつき暗号化](44.md)
 - [NIP-45: イベント計数](45.md)
 - [NIP-46: Nostrコネクト](46.md)
+=======
+- [NIP-18: Reposts](18.md)
+- [NIP-19: bech32-encoded entities](19.md)
+- [NIP-21: `nostr:` URI scheme](21.md)
+- [NIP-23: Long-form Content](23.md)
+- [NIP-24: Extra metadata fields and tags](24.md)
+- [NIP-25: Reactions](25.md)
+- [NIP-26: Delegated Event Signing](26.md)
+- [NIP-27: Text Note References](27.md)
+- [NIP-28: Public Chat](28.md)
+- [NIP-29: Relay-based Groups](29.md)
+- [NIP-30: Custom Emoji](30.md)
+- [NIP-31: Dealing with Unknown Events](31.md)
+- [NIP-32: Labeling](32.md)
+- [NIP-34: `git` stuff](34.md)
+- [NIP-36: Sensitive Content](36.md)
+- [NIP-38: User Statuses](38.md)
+- [NIP-39: External Identities in Profiles](39.md)
+- [NIP-40: Expiration Timestamp](40.md)
+- [NIP-42: Authentication of clients to relays](42.md)
+- [NIP-44: Versioned Encryption](44.md)
+- [NIP-45: Counting results](45.md)
+- [NIP-46: Nostr Connect](46.md)
+>>>>>>> upstream/master
 - [NIP-47: Wallet Connect](47.md)
 - [NIP-48: プロキシタグ](48.md)
 - [NIP-49: 秘密鍵暗号化](49.md)
@@ -79,6 +117,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-98: HTTP認証](98.md)
 - [NIP-99: Classified Listings](99.md)
 
+<<<<<<< HEAD
 ## イベント種別(kind)
 | kind          | 説明                            | NIP                      |
 | ------------- | ------------------------------- | -----------              |
@@ -158,6 +197,101 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `31989`       | 推奨ハンドラ                    | [89](89.md)              |
 | `31990`       | ハンドラ情報                    | [89](89.md)              |
 | `34550`       | Community Definition            | [72](72.md)              |
+=======
+## Event Kinds
+| kind          | description                | NIP                      |
+| ------------- | -------------------------- | ------------------------ |
+| `0`           | Metadata                   | [01](01.md)              |
+| `1`           | Short Text Note            | [01](01.md)              |
+| `2`           | Recommend Relay            | 01 (deprecated)          |
+| `3`           | Follows                    | [02](02.md)              |
+| `4`           | Encrypted Direct Messages  | [04](04.md)              |
+| `5`           | Event Deletion             | [09](09.md)              |
+| `6`           | Repost                     | [18](18.md)              |
+| `7`           | Reaction                   | [25](25.md)              |
+| `8`           | Badge Award                | [58](58.md)              |
+| `9`           | Group Chat Message         | [29](29.md)              |
+| `10`          | Group Chat Threaded Reply  | [29](29.md)              |
+| `11`          | Group Thread               | [29](29.md)              |
+| `12`          | Group Thread Reply         | [29](29.md)              |
+| `13`          | Seal                       | [59](59.md)              |
+| `16`          | Generic Repost             | [18](18.md)              |
+| `40`          | Channel Creation           | [28](28.md)              |
+| `41`          | Channel Metadata           | [28](28.md)              |
+| `42`          | Channel Message            | [28](28.md)              |
+| `43`          | Channel Hide Message       | [28](28.md)              |
+| `44`          | Channel Mute User          | [28](28.md)              |
+| `1021`        | Bid                        | [15](15.md)              |
+| `1022`        | Bid confirmation           | [15](15.md)              |
+| `1040`        | OpenTimestamps             | [03](03.md)              |
+| `1059`        | Gift Wrap                  | [59](59.md)              |
+| `1063`        | File Metadata              | [94](94.md)              |
+| `1311`        | Live Chat Message          | [53](53.md)              |
+| `1617`        | Patches                    | [34](34.md)              |
+| `1621`        | Issues                     | [34](34.md)              |
+| `1622`        | Replies                    | [34](34.md)              |
+| `1971`        | Problem Tracker            | [nostrocket][nostrocket] |
+| `1984`        | Reporting                  | [56](56.md)              |
+| `1985`        | Label                      | [32](32.md)              |
+| `4550`        | Community Post Approval    | [72](72.md)              |
+| `5000`-`5999` | Job Request                | [90](90.md)              |
+| `6000`-`6999` | Job Result                 | [90](90.md)              |
+| `7000`        | Job Feedback               | [90](90.md)              |
+| `9000`-`9030` | Group Control Events       | [29](29.md)              |
+| `9041`        | Zap Goal                   | [75](75.md)              |
+| `9734`        | Zap Request                | [57](57.md)              |
+| `9735`        | Zap                        | [57](57.md)              |
+| `9802`        | Highlights                 | [84](84.md)              |
+| `10000`       | Mute list                  | [51](51.md)              |
+| `10001`       | Pin list                   | [51](51.md)              |
+| `10002`       | Relay List Metadata        | [65](65.md)              |
+| `10003`       | Bookmark list              | [51](51.md)              |
+| `10004`       | Communities list           | [51](51.md)              |
+| `10005`       | Public chats list          | [51](51.md)              |
+| `10006`       | Blocked relays list        | [51](51.md)              |
+| `10007`       | Search relays list         | [51](51.md)              |
+| `10009`       | User groups                | [51](51.md), [29](29.md) |
+| `10015`       | Interests list             | [51](51.md)              |
+| `10030`       | User emoji list            | [51](51.md)              |
+| `10096`       | File storage server list   | [96](96.md)              |
+| `13194`       | Wallet Info                | [47](47.md)              |
+| `21000`       | Lightning Pub RPC          | [Lightning.Pub][lnpub]   |
+| `22242`       | Client Authentication      | [42](42.md)              |
+| `23194`       | Wallet Request             | [47](47.md)              |
+| `23195`       | Wallet Response            | [47](47.md)              |
+| `24133`       | Nostr Connect              | [46](46.md)              |
+| `27235`       | HTTP Auth                  | [98](98.md)              |
+| `30000`       | Follow sets                | [51](51.md)              |
+| `30001`       | Generic lists              | [51](51.md)              |
+| `30002`       | Relay sets                 | [51](51.md)              |
+| `30003`       | Bookmark sets              | [51](51.md)              |
+| `30004`       | Curation sets              | [51](51.md)              |
+| `30008`       | Profile Badges             | [58](58.md)              |
+| `30009`       | Badge Definition           | [58](58.md)              |
+| `30015`       | Interest sets              | [51](51.md)              |
+| `30017`       | Create or update a stall   | [15](15.md)              |
+| `30018`       | Create or update a product | [15](15.md)              |
+| `30019`       | Marketplace UI/UX          | [15](15.md)              |
+| `30020`       | Product sold as an auction | [15](15.md)              |
+| `30023`       | Long-form Content          | [23](23.md)              |
+| `30024`       | Draft Long-form Content    | [23](23.md)              |
+| `30030`       | Emoji sets                 | [51](51.md)              |
+| `30063`       | Release artifact sets      | [51](51.md)              |
+| `30078`       | Application-specific Data  | [78](78.md)              |
+| `30311`       | Live Event                 | [53](53.md)              |
+| `30315`       | User Statuses              | [38](38.md)              |
+| `30402`       | Classified Listing         | [99](99.md)              |
+| `30403`       | Draft Classified Listing   | [99](99.md)              |
+| `30617`       | Repository announcements   | [34](34.md)              |
+| `31922`       | Date-Based Calendar Event  | [52](52.md)              |
+| `31923`       | Time-Based Calendar Event  | [52](52.md)              |
+| `31924`       | Calendar                   | [52](52.md)              |
+| `31925`       | Calendar Event RSVP        | [52](52.md)              |
+| `31989`       | Handler recommendation     | [89](89.md)              |
+| `31990`       | Handler information        | [89](89.md)              |
+| `34550`       | Community Definition       | [72](72.md)              |
+| `39000-9`     | Group metadata events      | [29](29.md)              |
+>>>>>>> upstream/master
 
 [nostrocket]: https://github.com/nostrocket/NIPS/blob/main/Problems.md
 [lnpub]: https://github.com/shocknet/Lightning.Pub/blob/master/proto/autogenerated/client.md
@@ -202,6 +336,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `l`               | ラベル, ラベル名前空間               | annotations          | [32](32.md)                           |
 | `L`               | ラベル名前空間                       | --                   | [32](32.md)                           |
 | `m`               | MIME type                            | --                   | [94](94.md)                           |
+<<<<<<< HEAD
 | `r`               | 参照 (URL, etc)                      | petname              |                                       |
 | `r`               | リレーURL                            | marker               | [65](65.md)                           |
 | `t`               | ハッシュタグ                         | --                   |                                       |
@@ -214,12 +349,29 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `delegation`      | 公開鍵, 条件, 委任トークン           | --                   | [26](26.md)                           |
 | `description`     | インボイス/バッジの説明              | --                   | [57](57.md), [58](58.md)              |
 | `emoji`           | ショートコード, 画像 URL             | --                   | [30](30.md)                           |
+=======
+| `q`               | event id (hex)                       | relay URL    | [18](18.md)                           |
+| `r`               | a reference (URL, etc)               | petname              |                                       |
+| `r`               | relay url                            | marker               | [65](65.md)                           |
+| `t`               | hashtag                              | --                   |                                       |
+| `alt`             | summary                              | --                   | [31](31.md)                           |
+| `amount`          | millisatoshis, stringified           | --                   | [57](57.md)                           |
+| `bolt11`          | `bolt11` invoice                     | --                   | [57](57.md)                           |
+| `challenge`       | challenge string                     | --                   | [42](42.md)                           |
+| `client`          | name, address                        | relay URL            | [89](89.md)                           |
+| `clone`           | git clone URL                        | --                   | [34](34.md)                           |
+| `content-warning` | reason                               | --                   | [36](36.md)                           |
+| `delegation`      | pubkey, conditions, delegation token | --                   | [26](26.md)                           |
+| `description`     | description                          | --                   | [34](34.md), [57](57.md), [58](58.md) |
+| `emoji`           | shortcode, image URL                 | --                   | [30](30.md)                           |
+>>>>>>> upstream/master
 | `encrypted`       | --                                   | --                   | [90](90.md)                           |
 | `expiration`      | unix timestamp (string)              | --                   | [40](40.md)                           |
 | `goal`            | イベントID (hex)                     | relay URL            | [75](75.md)                           |
 | `image`           | 画像URL               　             | dimensions in pixels | [23](23.md), [58](58.md)              |
 | `imeta`           | インラインメタデータ                      | --                   | [92](92.md)                           |
 | `lnurl`           | `bech32` encoded `lnurl`             | --                   | [57](57.md)                           |
+<<<<<<< HEAD
 | `location`        | 場所文字列                           | --                   | [52](52.md), [99](99.md)              |
 | `name`            | バッジの名前                         | --                   | [58](58.md)                           |
 | `nonce`           | 乱数                                 | --                   | [13](13.md)                           |
@@ -235,6 +387,24 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `thumb`           | バッジサムネイル                     | dimensions in pixels | [58](58.md)                           |
 | `title`           | 記事のタイトル                       | --                   | [23](23.md)                           |
 | `zap`             | 公開鍵 (hex), リレー URL             | weight               | [57](57.md)                           |
+=======
+| `location`        | location string                      | --                   | [52](52.md), [99](99.md)              |
+| `name`            | name                                 | --                   | [34](34.md), [58](58.md)              |
+| `nonce`           | random                               | --                   | [13](13.md)                           |
+| `preimage`        | hash of `bolt11` invoice             | --                   | [57](57.md)                           |
+| `price`           | price                                | currency, frequency  | [99](99.md)                           |
+| `proxy`           | external ID                          | protocol             | [48](48.md)                           |
+| `published_at`    | unix timestamp (string)              | --                   | [23](23.md)                           |
+| `relay`           | relay url                            | --                   | [42](42.md)                           |
+| `relays`          | relay list                           | --                   | [57](57.md)                           |
+| `server`          | file storage server url              | --                   | [96](96.md)                           |
+| `subject`         | subject                              | --                   | [14](14.md)                           |
+| `summary`         | article summary                      | --                   | [23](23.md)                           |
+| `thumb`           | badge thumbnail                      | dimensions in pixels | [58](58.md)                           |
+| `title`           | article title                        | --                   | [23](23.md)                           |
+| `web`             | webpage URL                          | --                   | [34](34.md)                           |
+| `zap`             | pubkey (hex), relay URL              | weight               | [57](57.md)                           |
+>>>>>>> upstream/master
 
 ## NIPsの受け入れ基準
 
@@ -257,6 +427,10 @@ There is a list of notable Nostr software developers who have commit access to t
 Standards may emerge in two ways: the first way is that someone starts doing something, then others copy it; the second way is that someone has an idea of a new standard that could benefit multiple clients and the protocol in general without breaking **backwards-compatibility** and the principle of having **a single way of doing things**, then they write that idea and submit it to this repository, other interested parties read it and give their feedback, then once most people reasonably agree we codify that in a NIP which client and relay developers that are interested in the feature can proceed to implement.
 
 These two ways of standardizing things are supported by this repository. Although the second is preferred, an effort will be made to codify standards emerged outside this repository into NIPs that can be later referenced and easily understood and implemented by others -- but obviously as in any human system discretion may be applied when standards are considered harmful.
+
+## Breaking Changes
+
+[Breaking Changes](BREAKING.md)
 
 ## License
 
