@@ -232,6 +232,20 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `delegation`      | 公開鍵, 条件, 委任トークン           | --                   | [26](26.md)                           |
 | `description`     | インボイス/バッジの説明              | --                   | [57](57.md), [58](58.md)              |
 | `emoji`           | ショートコード, 画像 URL             | --                   | [30](30.md)                           |
+| `q`               | イベントID (hex)                       | relay URL    | [18](18.md)                           |
+| `r`               | 参照 (URL, etc)               | petname              |                                       |
+| `r`               | リレーURL                            | marker               | [65](65.md)                           |
+| `t`               | ハッシュタグ                              | --                   |                                       |
+| `alt`             | 概要                              | --                   | [31](31.md)                           |
+| `amount`          | 文字列化されたミリサトシ           | --                   | [57](57.md)                           |
+| `bolt11`          | `bolt11` invoice                     | --                   | [57](57.md)                           |
+| `challenge`       | チャレンジ文字列                     | --                   | [42](42.md)                           |
+| `client`          | 名前, アドレス                        | relay URL            | [89](89.md)                           |
+| `clone`           | git clone URL                        | --                   | [34](34.md)                           |
+| `content-warning` | 理由                               | --                   | [36](36.md)                           |
+| `delegation`      | 公開鍵, 条件, 委任トークン | --                   | [26](26.md)                           |
+| `description`     | インボイス/バッジの説明                          | --                   | [34](34.md), [57](57.md), [58](58.md) |
+| `emoji`           | ショートコード, 画像 URL                 | --                   | [30](30.md)                           |
 | `encrypted`       | --                                   | --                   | [90](90.md)                           |
 | `expiration`      | unix timestamp (string)              | --                   | [40](40.md)                           |
 | `goal`            | イベントID (hex)                     | relay URL            | [75](75.md)                           |
@@ -253,6 +267,22 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `thumb`           | バッジサムネイル                     | dimensions in pixels | [58](58.md)                           |
 | `title`           | 記事のタイトル                       | --                   | [23](23.md)                           |
 | `zap`             | 公開鍵 (hex), リレー URL             | weight               | [57](57.md)                           |
+| `location`        | 場所文字列                      | --                   | [52](52.md), [99](99.md)              |
+| `name`            | 名前                                 | --                   | [34](34.md), [58](58.md)              |
+| `nonce`           | 乱数                               | --                   | [13](13.md)                           |
+| `preimage`        | `bolt11` インボイスのハッシュ             | --                   | [57](57.md)                           |
+| `price`           | 値段                                | currency, frequency  | [99](99.md)                           |
+| `proxy`           | 外部ID                          | protocol             | [48](48.md)                           |
+| `published_at`    | unix timestamp (string)              | --                   | [23](23.md)                           |
+| `relay`           | リレーURL                            | --                   | [42](42.md)                           |
+| `relays`          | リレーリスト                           | --                   | [57](57.md)                           |
+| `server`          | ファイルストレージサーバーURL              | --                   | [96](96.md)                           |
+| `subject`         | 件名                              | --                   | [14](14.md)                           |
+| `summary`         | 記事の要約                      | --                   | [23](23.md)                           |
+| `thumb`           | バッジサムネイル                      | dimensions in pixels | [58](58.md)                           |
+| `title`           | 記事のタイトル                        | --                   | [23](23.md)                           |
+| `web`             | webpage URL                          | --                   | [34](34.md)                           |
+| `zap`             | 公開鍵 (hex), リレー URL              | weight               | [57](57.md)                           |
 
 ## NIPsの受け入れ基準
 
