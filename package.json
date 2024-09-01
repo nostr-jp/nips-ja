@@ -6,7 +6,7 @@
   },
   "devDependencies": {
     "husky": "^9.1.4",
-    "lint-staged": "^15.2.7",
+    "lint-staged": "^15.2.9",
     "textlint": "^14.0.4",
     "textlint-rule-preset-ja-spacing": "^2.4.3",
     "textlint-rule-preset-ja-technical-writing": "^10.0.1"
