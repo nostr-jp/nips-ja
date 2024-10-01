@@ -5,7 +5,7 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "husky": "^9.1.5",
+    "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "textlint": "^14.2.0",
     "textlint-rule-preset-ja-spacing": "^2.4.3",
