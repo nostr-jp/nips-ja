@@ -74,6 +74,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-57: Lightning Zaps](57.md)
 - [NIP-58: バッジ](58.md)
 - [NIP-59: Gift Wrap](59.md)
+<<<<<<< HEAD
 - [NIP-60: カシューウォレット](60.md)
 - [NIP-61: ナッツzaps](61.md)
 - [NIP-64: チェス (PGN)](64.md)
@@ -85,14 +86,35 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-84: ハイライト](84.md)
 - [NIP-89: 推奨アプリケーションハンドラ](89.md)
 - [NIP-90: データ自動販売機](90.md)
+=======
+- [NIP-60: Cashu Wallet](60.md)
+- [NIP-61: Nutzaps](61.md)
+- [NIP-64: Chess (PGN)](64.md)
+- [NIP-65: Relay List Metadata](65.md)
+- [NIP-68: Picture-first feeds](68.md)
+- [NIP-69: Peer-to-peer Order events](69.md)
+- [NIP-70: Protected Events](70.md)
+- [NIP-71: Video Events](71.md)
+- [NIP-72: Moderated Communities](72.md)
+- [NIP-73: External Content IDs](73.md)
+- [NIP-75: Zap Goals](75.md)
+- [NIP-78: Application-specific data](78.md)
+- [NIP-84: Highlights](84.md)
+- [NIP-86: Relay Management API](86.md)
+- [NIP-89: Recommended Application Handlers](89.md)
+- [NIP-90: Data Vending Machines](90.md)
+>>>>>>> upstream/master
 - [NIP-92: Media Attachments](92.md)
 - [NIP-94: ファイルメタデータ](94.md)
 - [NIP-96: HTTPファイルストレージインテグレーション](96.md)
 - [NIP-98: HTTP認証](98.md)
 - [NIP-99: Classified Listings](99.md)
+- [NIP-7D: Threads](7D.md)
+- [NIP-C7: Chats](C7.md)
 
 ## Event Kinds
 
+<<<<<<< HEAD
 | kind          | description                | NIP                      |
 | ------------- | -------------------------- | ------------------------ |
 | `0`           | ユーザーメタデータ                   | [01](01.md)              |
@@ -192,6 +214,107 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `30023`       | 長文投稿          | [23](23.md)              |
 | `30024`       | 長文投稿の下書き    | [23](23.md)              |
 | `30030`       | 絵文字セット                 | [51](51.md)              |
+=======
+| kind          | description                     | NIP                                    |
+| ------------- | ------------------------------- | -------------------------------------- |
+| `0`           | User Metadata                   | [01](01.md)                            |
+| `1`           | Short Text Note                 | [01](01.md)                            |
+| `2`           | Recommend Relay                 | 01 (deprecated)                        |
+| `3`           | Follows                         | [02](02.md)                            |
+| `4`           | Encrypted Direct Messages       | [04](04.md)                            |
+| `5`           | Event Deletion Request          | [09](09.md)                            |
+| `6`           | Repost                          | [18](18.md)                            |
+| `7`           | Reaction                        | [25](25.md)                            |
+| `8`           | Badge Award                     | [58](58.md)                            |
+| `9`           | Chat Message                    | [C7](C7.md)                            |
+| `10`          | Group Chat Threaded Reply       | 29 (deprecated)                        |
+| `11`          | Thread                          | [7D](7D.md)                            |
+| `12`          | Group Thread Reply              | 29 (deprecated)                        |
+| `13`          | Seal                            | [59](59.md)                            |
+| `14`          | Direct Message                  | [17](17.md)                            |
+| `16`          | Generic Repost                  | [18](18.md)                            |
+| `17`          | Reaction to a website           | [25](25.md)                            |
+| `40`          | Channel Creation                | [28](28.md)                            |
+| `41`          | Channel Metadata                | [28](28.md)                            |
+| `42`          | Channel Message                 | [28](28.md)                            |
+| `43`          | Channel Hide Message            | [28](28.md)                            |
+| `44`          | Channel Mute User               | [28](28.md)                            |
+| `64`          | Chess (PGN)                     | [64](64.md)                            |
+| `818`         | Merge Requests                  | [54](54.md)                            |
+| `1021`        | Bid                             | [15](15.md)                            |
+| `1022`        | Bid confirmation                | [15](15.md)                            |
+| `1040`        | OpenTimestamps                  | [03](03.md)                            |
+| `1059`        | Gift Wrap                       | [59](59.md)                            |
+| `1063`        | File Metadata                   | [94](94.md)                            |
+| `1111`        | Comment                         | [22](22.md)                            |
+| `1311`        | Live Chat Message               | [53](53.md)                            |
+| `1617`        | Patches                         | [34](34.md)                            |
+| `1621`        | Issues                          | [34](34.md)                            |
+| `1622`        | Replies                         | [34](34.md)                            |
+| `1630`-`1633` | Status                          | [34](34.md)                            |
+| `1971`        | Problem Tracker                 | [nostrocket][nostrocket]               |
+| `1984`        | Reporting                       | [56](56.md)                            |
+| `1985`        | Label                           | [32](32.md)                            |
+| `1986`        | Relay reviews                   |                                        |
+| `1987`        | AI Embeddings / Vector lists    | [NKBIP-02]                             |
+| `2003`        | Torrent                         | [35](35.md)                            |
+| `2004`        | Torrent Comment                 | [35](35.md)                            |
+| `2022`        | Coinjoin Pool                   | [joinstr][joinstr]                     |
+| `4550`        | Community Post Approval         | [72](72.md)                            |
+| `5000`-`5999` | Job Request                     | [90](90.md)                            |
+| `6000`-`6999` | Job Result                      | [90](90.md)                            |
+| `7000`        | Job Feedback                    | [90](90.md)                            |
+| `7374`        | Reserved Cashu Wallet Tokens    | [60](60.md)                            |
+| `7375`        | Cashu Wallet Tokens             | [60](60.md)                            |
+| `7376`        | Cashu Wallet History            | [60](60.md)                            |
+| `9000`-`9030` | Group Control Events            | [29](29.md)                            |
+| `9041`        | Zap Goal                        | [75](75.md)                            |
+| `9321`        | Nutzap                          | [61](61.md)                            |
+| `9467`        | Tidal login                     | [Tidal-nostr]                          |
+| `9734`        | Zap Request                     | [57](57.md)                            |
+| `9735`        | Zap                             | [57](57.md)                            |
+| `9802`        | Highlights                      | [84](84.md)                            |
+| `10000`       | Mute list                       | [51](51.md)                            |
+| `10001`       | Pin list                        | [51](51.md)                            |
+| `10002`       | Relay List Metadata             | [65](65.md)                            |
+| `10003`       | Bookmark list                   | [51](51.md)                            |
+| `10004`       | Communities list                | [51](51.md)                            |
+| `10005`       | Public chats list               | [51](51.md)                            |
+| `10006`       | Blocked relays list             | [51](51.md)                            |
+| `10007`       | Search relays list              | [51](51.md)                            |
+| `10009`       | User groups                     | [51](51.md), [29](29.md)               |
+| `10015`       | Interests list                  | [51](51.md)                            |
+| `10019`       | Nutzap Mint Recommendation      | [61](61.md)                            |
+| `10030`       | User emoji list                 | [51](51.md)                            |
+| `10050`       | Relay list to receive DMs       | [51](51.md), [17](17.md)               |
+| `10063`       | User server list                | [Blossom][blossom]                     |
+| `10096`       | File storage server list        | [96](96.md)                            |
+| `13194`       | Wallet Info                     | [47](47.md)                            |
+| `21000`       | Lightning Pub RPC               | [Lightning.Pub][lnpub]                 |
+| `22242`       | Client Authentication           | [42](42.md)                            |
+| `23194`       | Wallet Request                  | [47](47.md)                            |
+| `23195`       | Wallet Response                 | [47](47.md)                            |
+| `24133`       | Nostr Connect                   | [46](46.md)                            |
+| `24242`       | Blobs stored on mediaservers    | [Blossom][blossom]                     |
+| `27235`       | HTTP Auth                       | [98](98.md)                            |
+| `30000`       | Follow sets                     | [51](51.md)                            |
+| `30001`       | Generic lists                   | [51](51.md)                            |
+| `30002`       | Relay sets                      | [51](51.md)                            |
+| `30003`       | Bookmark sets                   | [51](51.md)                            |
+| `30004`       | Curation sets                   | [51](51.md)                            |
+| `30005`       | Video sets                      | [51](51.md)                            |
+| `30007`       | Kind mute sets                  | [51](51.md)                            |
+| `30008`       | Profile Badges                  | [58](58.md)                            |
+| `30009`       | Badge Definition                | [58](58.md)                            |
+| `30015`       | Interest sets                   | [51](51.md)                            |
+| `30017`       | Create or update a stall        | [15](15.md)                            |
+| `30018`       | Create or update a product      | [15](15.md)                            |
+| `30019`       | Marketplace UI/UX               | [15](15.md)                            |
+| `30020`       | Product sold as an auction      | [15](15.md)                            |
+| `30023`       | Long-form Content               | [23](23.md)                            |
+| `30024`       | Draft Long-form Content         | [23](23.md)                            |
+| `30030`       | Emoji sets                      | [51](51.md)                            |
+>>>>>>> upstream/master
 | `30040`       | Modular Article Header          | [NKBIP-01]                             |
 | `30041`       | Modular Article Content         | [NKBIP-01]                             |
 | `30063`       | Release artifact sets      | [51](51.md)              |
