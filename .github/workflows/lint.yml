@@ -11,14 +11,22 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      # プルリクエスト元リポジトリからプルリクエスト作成時のプルリクエスト先baseブランチの最新コミットを取得
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.base.sha }}
+      # プルリクエスト元リポジトリからプルリクエスト用ブランチの最新コミットを取得して上書き
       - uses: actions/checkout@v4
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.head_ref }}
+      # プルリクエスト作成時のプルリクエスト先baseブランチの最新コミットとプルリクエスト先headブランチの最新コミットを比較
       - name: modified files
         run: |
-          modified_files=$(git diff --name-only --diff-filter=AM origin/${{ github.base_ref }..origin${{ github.head_ref }} | tr '\n' ' ')
+          modified_files=$(git diff --name-only --diff-filter=AM ${{ github.event.pull_request.base.sha }}..origin/${{ github.head_ref }} | tr '\n' ' ')
           echo "textlint_flags=$modified_files" >> $GITHUB_ENV
       - uses: tsuyoshicho/action-textlint@v3
         with:
           fail_on_error: true
+          textlint_flags: ${{ env.textlint_flags }}
