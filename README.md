@@ -78,10 +78,12 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-61: ナッツzaps](61.md)
 - [NIP-64: チェス (PGN)](64.md)
 - [NIP-65: リレーリストメタデータ](65.md)
+- [NIP-68: 画像第一フィード](68.md)
 - [NIP-72: Moderated Communities](72.md)
 - [NIP-73: External Content IDs](73.md)
 - [NIP-75: Zap Goals](75.md)
 - [NIP-78: アプリケーション固有データ](78.md)
+- [NIP-86: リレー管理 API](86.md)
 - [NIP-84: ハイライト](84.md)
 - [NIP-89: 推奨アプリケーションハンドラ](89.md)
 - [NIP-90: データ自動販売機](90.md)
@@ -90,6 +92,8 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-96: HTTPファイルストレージインテグレーション](96.md)
 - [NIP-98: HTTP認証](98.md)
 - [NIP-99: Classified Listings](99.md)
+- [NIP-7D: スレッド](7D.md)
+- [NIP-C7: チャット](C7.md)
 
 ## Event Kinds
 
@@ -104,9 +108,9 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `6`           | リポスト                     | [18](18.md)              |
 | `7`           | リアクション                   | [25](25.md)              |
 | `8`           | バッジ・表彰                | [58](58.md)              |
-| `9`           | グループチャットメッセージ         | [29](29.md)              |
+| `9`           | チャットメッセージ         | [C7](C7.md)              |
 | `10`          | グループチャットスレッドリプライ  | 29 (非推奨)              |
-| `11`          | グループスレッド               | [29](29.md)              |
+| `11`          | スレッド               | [7D](7D.md)              |
 | `12`          | グループスレッドリプライ         | 29 (非推奨)              |
 | `13`          | 封緘                       | [59](59.md)              |
 | `14`          | ダイレクトメッセージ | [17](17.md) |
