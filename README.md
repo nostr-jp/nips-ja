@@ -97,6 +97,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 
 ## Event Kinds
 
+<<<<<<< HEAD
 | kind          | description                | NIP                      |
 | ------------- | -------------------------- | ------------------------ |
 | `0`           | ユーザーメタデータ                   | [01](01.md)              |
@@ -196,6 +197,107 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `30023`       | 長文投稿          | [23](23.md)              |
 | `30024`       | 長文投稿の下書き    | [23](23.md)              |
 | `30030`       | 絵文字セット                 | [51](51.md)              |
+=======
+| kind          | description                     | NIP                                    |
+| ------------- | ------------------------------- | -------------------------------------- |
+| `0`           | User Metadata                   | [01](01.md)                            |
+| `1`           | Short Text Note                 | [01](01.md)                            |
+| `2`           | Recommend Relay                 | 01 (deprecated)                        |
+| `3`           | Follows                         | [02](02.md)                            |
+| `4`           | Encrypted Direct Messages       | [04](04.md)                            |
+| `5`           | Event Deletion Request          | [09](09.md)                            |
+| `6`           | Repost                          | [18](18.md)                            |
+| `7`           | Reaction                        | [25](25.md)                            |
+| `8`           | Badge Award                     | [58](58.md)                            |
+| `9`           | Chat Message                    | [C7](C7.md)                            |
+| `10`          | Group Chat Threaded Reply       | 29 (deprecated)                        |
+| `11`          | Thread                          | [7D](7D.md)                            |
+| `12`          | Group Thread Reply              | 29 (deprecated)                        |
+| `13`          | Seal                            | [59](59.md)                            |
+| `14`          | Direct Message                  | [17](17.md)                            |
+| `16`          | Generic Repost                  | [18](18.md)                            |
+| `17`          | Reaction to a website           | [25](25.md)                            |
+| `40`          | Channel Creation                | [28](28.md)                            |
+| `41`          | Channel Metadata                | [28](28.md)                            |
+| `42`          | Channel Message                 | [28](28.md)                            |
+| `43`          | Channel Hide Message            | [28](28.md)                            |
+| `44`          | Channel Mute User               | [28](28.md)                            |
+| `64`          | Chess (PGN)                     | [64](64.md)                            |
+| `818`         | Merge Requests                  | [54](54.md)                            |
+| `1021`        | Bid                             | [15](15.md)                            |
+| `1022`        | Bid confirmation                | [15](15.md)                            |
+| `1040`        | OpenTimestamps                  | [03](03.md)                            |
+| `1059`        | Gift Wrap                       | [59](59.md)                            |
+| `1063`        | File Metadata                   | [94](94.md)                            |
+| `1111`        | Comment                         | [22](22.md)                            |
+| `1311`        | Live Chat Message               | [53](53.md)                            |
+| `1617`        | Patches                         | [34](34.md)                            |
+| `1621`        | Issues                          | [34](34.md)                            |
+| `1622`        | Replies                         | [34](34.md)                            |
+| `1630`-`1633` | Status                          | [34](34.md)                            |
+| `1971`        | Problem Tracker                 | [nostrocket][nostrocket]               |
+| `1984`        | Reporting                       | [56](56.md)                            |
+| `1985`        | Label                           | [32](32.md)                            |
+| `1986`        | Relay reviews                   |                                        |
+| `1987`        | AI Embeddings / Vector lists    | [NKBIP-02]                             |
+| `2003`        | Torrent                         | [35](35.md)                            |
+| `2004`        | Torrent Comment                 | [35](35.md)                            |
+| `2022`        | Coinjoin Pool                   | [joinstr][joinstr]                     |
+| `4550`        | Community Post Approval         | [72](72.md)                            |
+| `5000`-`5999` | Job Request                     | [90](90.md)                            |
+| `6000`-`6999` | Job Result                      | [90](90.md)                            |
+| `7000`        | Job Feedback                    | [90](90.md)                            |
+| `7374`        | Reserved Cashu Wallet Tokens    | [60](60.md)                            |
+| `7375`        | Cashu Wallet Tokens             | [60](60.md)                            |
+| `7376`        | Cashu Wallet History            | [60](60.md)                            |
+| `9000`-`9030` | Group Control Events            | [29](29.md)                            |
+| `9041`        | Zap Goal                        | [75](75.md)                            |
+| `9321`        | Nutzap                          | [61](61.md)                            |
+| `9467`        | Tidal login                     | [Tidal-nostr]                          |
+| `9734`        | Zap Request                     | [57](57.md)                            |
+| `9735`        | Zap                             | [57](57.md)                            |
+| `9802`        | Highlights                      | [84](84.md)                            |
+| `10000`       | Mute list                       | [51](51.md)                            |
+| `10001`       | Pin list                        | [51](51.md)                            |
+| `10002`       | Relay List Metadata             | [65](65.md)                            |
+| `10003`       | Bookmark list                   | [51](51.md)                            |
+| `10004`       | Communities list                | [51](51.md)                            |
+| `10005`       | Public chats list               | [51](51.md)                            |
+| `10006`       | Blocked relays list             | [51](51.md)                            |
+| `10007`       | Search relays list              | [51](51.md)                            |
+| `10009`       | User groups                     | [51](51.md), [29](29.md)               |
+| `10015`       | Interests list                  | [51](51.md)                            |
+| `10019`       | Nutzap Mint Recommendation      | [61](61.md)                            |
+| `10030`       | User emoji list                 | [51](51.md)                            |
+| `10050`       | Relay list to receive DMs       | [51](51.md), [17](17.md)               |
+| `10063`       | User server list                | [Blossom][blossom]                     |
+| `10096`       | File storage server list        | [96](96.md)                            |
+| `13194`       | Wallet Info                     | [47](47.md)                            |
+| `21000`       | Lightning Pub RPC               | [Lightning.Pub][lnpub]                 |
+| `22242`       | Client Authentication           | [42](42.md)                            |
+| `23194`       | Wallet Request                  | [47](47.md)                            |
+| `23195`       | Wallet Response                 | [47](47.md)                            |
+| `24133`       | Nostr Connect                   | [46](46.md)                            |
+| `24242`       | Blobs stored on mediaservers    | [Blossom][blossom]                     |
+| `27235`       | HTTP Auth                       | [98](98.md)                            |
+| `30000`       | Follow sets                     | [51](51.md)                            |
+| `30001`       | Generic lists                   | 51 (deprecated)                        |
+| `30002`       | Relay sets                      | [51](51.md)                            |
+| `30003`       | Bookmark sets                   | [51](51.md)                            |
+| `30004`       | Curation sets                   | [51](51.md)                            |
+| `30005`       | Video sets                      | [51](51.md)                            |
+| `30007`       | Kind mute sets                  | [51](51.md)                            |
+| `30008`       | Profile Badges                  | [58](58.md)                            |
+| `30009`       | Badge Definition                | [58](58.md)                            |
+| `30015`       | Interest sets                   | [51](51.md)                            |
+| `30017`       | Create or update a stall        | [15](15.md)                            |
+| `30018`       | Create or update a product      | [15](15.md)                            |
+| `30019`       | Marketplace UI/UX               | [15](15.md)                            |
+| `30020`       | Product sold as an auction      | [15](15.md)                            |
+| `30023`       | Long-form Content               | [23](23.md)                            |
+| `30024`       | Draft Long-form Content         | [23](23.md)                            |
+| `30030`       | Emoji sets                      | [51](51.md)                            |
+>>>>>>> upstream/master
 | `30040`       | Modular Article Header          | [NKBIP-01]                             |
 | `30041`       | Modular Article Content         | [NKBIP-01]                             |
 | `30063`       | Release artifact sets      | [51](51.md)              |
@@ -262,6 +364,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 
 新しいイベント種別(kind)を含むNIPsを提案する場合は、これらのリストも更新すること。
 
+<<<<<<< HEAD
 ## 標準化済みタグ
 
 | タグ名            | 値                                   | その他パラメータ      | NIP                                  |
@@ -272,6 +375,36 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `e`               | イベントID (hex)                     | relay URL, marker    | [01](01.md), [10](10.md)              |
 | `E`               | ルートイベントID                         | relay URL                       | [22](22.md)                                        |
 | `f`               | 通貨コード                        | --                              | [69](69.md)                                        |
+=======
+| name              | value                                | other parameters                | NIP                                                |
+| ----------------- | ------------------------------------ | ------------------------------- | -------------------------------------------------- |
+| `a`               | coordinates to an event              | relay URL                       | [01](01.md)                                        |
+| `A`               | root address                         | relay URL                       | [22](22.md)                                        |
+| `d`               | identifier                           | --                              | [01](01.md)                                        |
+| `e`               | event id (hex)                       | relay URL, marker, pubkey (hex) | [01](01.md), [10](10.md)                           |
+| `E`               | root event id                        | relay URL                       | [22](22.md)                                        |
+| `f`               | currency code                        | --                              | [69](69.md)                                        |
+| `g`               | geohash                              | --                              | [52](52.md)                                        |
+| `h`               | group id                             | --                              | [29](29.md)                                        |
+| `i`               | external identity                    | proof, url hint                 | [35](35.md), [39](39.md), [73](73.md)              |
+| `I`               | root external identity               | --                              | [22](22.md)                                        |
+| `k`               | kind                                 | --                              | [18](18.md), [25](25.md), [72](72.md), [73](73.md) |
+| `K`               | root scope                           | --                              | [22](22.md)                                        |
+| `l`               | label, label namespace               | --                              | [32](32.md)                                        |
+| `L`               | label namespace                      | --                              | [32](32.md)                                        |
+| `m`               | MIME type                            | --                              | [94](94.md)                                        |
+| `p`               | pubkey (hex)                         | relay URL, petname              | [01](01.md), [02](02.md)                           |
+| `P`               | pubkey (hex)                         | --                              | [57](57.md)                                        |
+| `q`               | event id (hex)                       | relay URL, pubkey (hex)         | [18](18.md)                                        |
+| `r`               | a reference (URL, etc)               | --                              | [24](24.md), [25](25.md)                           |
+| `r`               | relay url                            | marker                          | [65](65.md)                                        |
+| `s`               | status                               | --                              | [69](69.md)                                        |
+| `t`               | hashtag                              | --                              | [24](24.md), [34](34.md), [35](35.md)              |
+| `u`               | url                                  | --                              | [61](61.md), [98](98.md)                           |
+| `x`               | infohash                             | --                              | [35](35.md)                                        |
+| `y`               | platform                             | --                              | [69](69.md)                                        |
+| `z`               | order number                         | --                              | [69](69.md)                                        |
+>>>>>>> upstream/master
 | `-`               | --                                   | --                              | [70](70.md)                                        |
 | `g`               | ジオハッシュ                         | --                   | [52](52.md)                           |
 | `h`               | グループID                             | --                              | [29](29.md)                                        |
