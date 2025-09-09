@@ -12,12 +12,12 @@ jobs:
     timeout-minutes: 10
     steps:
       # プルリクエスト元リポジトリからプルリクエスト作成時のプルリクエスト先baseブランチの最新コミットを取得
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.base.sha }}
       # プルリクエスト元リポジトリからプルリクエスト用ブランチの最新コミットを取得して上書き
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.head_ref }}
