@@ -4,8 +4,11 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 
 本文書は、[Nostr](https://github.com/nostr-protocol/nostr)互換のリレーおよびクライアントソフトウェアによって実装されうるものを文書化するために存在している。
 
+NIPs listed here are not a protocol checklist. Nothing forces any software to implement any NIP. Each app picks the subset relevant to its use case. Don't implement something just because it exists in this repo. Other standards and NIPs may exist outside this repository (e.g. as pull requests) and may already be deployed in the wild -- they should also be considered for implementation.
+
 ---
 
+<<<<<<< HEAD
 - [仕様一覧](#仕様一覧)
 - [イベント種別(kind)](#イベント種別kind)
 - [メッセージ型](#メッセージ型)
@@ -17,11 +20,23 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [このリポジトリの仕組み](#このリポジトリの仕組み)
 - [破壊的変更](#破壊的変更)
 - [ライセンス](#ライセンス)
+=======
+- [List](#list)
+- [Event Kinds](#event-kinds)
+- [Message Types](#message-types)
+  - [Client to Relay](#client-to-relay)
+  - [Relay to Client](#relay-to-client)
+- [Criteria for acceptance of NIPs](#criteria-for-acceptance-of-nips-in-this-repository)
+- [Is this repository a centralizing factor?](#is-this-repository-a-centralizing-factor)
+- [How this repository works](#how-this-repository-works)
+- [License](#license)
+>>>>>>> upstream/master
 
 ---
 
 ## 仕様一覧
 
+<<<<<<< HEAD
 - [NIP-01: 基本的なプロトコルフローの説明](01.md)
 - [NIP-02: フォローリスト](02.md)
 - [NIP-03: イベントに対するOpenTimestamps認証](03.md)
@@ -68,12 +83,63 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 - [NIP-51: リスト](51.md)
 - [NIP-52: カレンダーイベント](52.md)
 - [NIP-53: ライブアクティビティ](53.md)
+=======
+- [NIP-01: Basic protocol flow description](01.md)
+- [NIP-02: Follow List](02.md)
+- ~~[NIP-03: OpenTimestamps Attestations for Events](03.md) --- **unrecommended**: vulnerable to one specific attack, needs update~~
+- ~~[NIP-04: Encrypted Direct Message](04.md) --- **unrecommended**: deprecated in favor of [NIP-17](17.md)~~
+- [NIP-05: Mapping Nostr keys to DNS-based internet identifiers](05.md)
+- ~~[NIP-06: Basic key derivation from mnemonic seed phrase](06.md) --- **unrecommended**: prefer a single nsec~~
+- [NIP-07: `window.nostr` capability for web browsers](07.md)
+- ~~[NIP-08: Handling Mentions](08.md) --- **unrecommended**: deprecated in favor of [NIP-27](27.md)~~
+- [NIP-09: Event Deletion Request](09.md)
+- [NIP-10: Text Notes and Threads](10.md)
+- [NIP-11: Relay Information Document](11.md)
+- [NIP-13: Proof of Work](13.md)
+- [NIP-14: Subject tag in text events](14.md)
+- ~~[NIP-15: Nostr Marketplace (for resilient marketplaces)](15.md) --- **unrecommended**: too complicated, try [99](99.md) instead~~
+- [NIP-17: Private Direct Messages](17.md)
+- [NIP-18: Reposts](18.md)
+- [NIP-19: bech32-encoded entities](19.md)
+- [NIP-21: `nostr:` URI scheme](21.md)
+- [NIP-22: Comment](22.md)
+- [NIP-23: Long-form Content](23.md)
+- [NIP-24: Extra metadata fields and tags](24.md)
+- [NIP-25: Reactions](25.md)
+- ~~[NIP-26: Delegated Event Signing](26.md) --- **unrecommended**: adds unnecessary burden for little gain~~
+- [NIP-27: Text Note References](27.md)
+- ~~[NIP-28: Public Chat](28.md) --- **unrecommended**: try [NIP-29](29.md) instead~~
+- [NIP-29: Relay-based Groups](29.md)
+- [NIP-30: Custom Emoji](30.md)
+- ~~[NIP-31: Dealing with Unknown Events](31.md) --- **unrecommended**: unnecessarily bloated~~
+- [NIP-32: Labeling](32.md)
+- [NIP-34: `git` stuff](34.md)
+- [NIP-35: Torrents](35.md)
+- [NIP-36: Sensitive Content](36.md)
+- [NIP-37: Draft Events](37.md)
+- [NIP-38: User Statuses](38.md)
+- [NIP-39: Linking Profiles to Other Platforms](39.md)
+- [NIP-40: Expiration Timestamp](40.md)
+- [NIP-42: Authentication of clients to relays](42.md)
+- [NIP-43: Relay Access Metadata and Requests](43.md)
+- [NIP-44: Encrypted Payloads (Versioned)](44.md)
+- [NIP-45: Counting results](45.md)
+- [NIP-46: Nostr Remote Signing](46.md)
+- [NIP-47: Nostr Wallet Connect](47.md)
+- [NIP-48: Bridged Events](48.md)
+- [NIP-49: Private Key Encryption (`ncryptsec`)](49.md)
+- [NIP-50: Search Capability](50.md)
+- [NIP-51: Lists](51.md)
+- [NIP-52: Calendar Events](52.md)
+- [NIP-53: Live Streaming and Spaces](53.md)
+>>>>>>> upstream/master
 - [NIP-54: Wiki](54.md)
 - [NIP-55: アンドロイド署名アプリ](55.md)
 - [NIP-56: 通報](56.md)
 - [NIP-57: Lightning Zaps](57.md)
 - [NIP-58: バッジ](58.md)
 - [NIP-59: Gift Wrap](59.md)
+<<<<<<< HEAD
 - [NIP-60: カシューウォレット](60.md)
 - [NIP-61: ナッツzaps](61.md)
 - [NIP-64: チェス (PGN)](64.md)
@@ -224,17 +290,239 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `38383`       | Peer-to-peer Order events       | [69](69.md)                            |
 | `39000-9`     | Group metadata events      | [29](29.md)              |
 
+=======
+- [NIP-5A: Static Websites (nsites)](5A.md)
+- [NIP-60: Cashu Wallet](60.md)
+- [NIP-61: Nutzaps](61.md)
+- [NIP-62: Request to Vanish](62.md)
+- [NIP-64: Chess (PGN)](64.md)
+- [NIP-65: Relay List Metadata](65.md)
+- [NIP-66: Relay Discovery and Liveness Monitoring](66.md)
+- [NIP-67: EOSE Completeness Hint](67.md)
+- [NIP-68: Picture-first feeds](68.md)
+- [NIP-69: Peer-to-peer Order events](69.md)
+- [NIP-70: Protected Events](70.md)
+- [NIP-71: Video Events](71.md)
+- ~~[NIP-72: Moderated Communities](72.md) --- **unrecommended**: try [NIP-29](29.md) instead~~
+- [NIP-73: External Content IDs](73.md)
+- [NIP-75: Zap Goals](75.md)
+- [NIP-77: Negentropy Syncing](77.md)
+- [NIP-78: Application-specific data](78.md)
+- [NIP-7D: Forum Threads](7D.md)
+- [NIP-84: Highlights](84.md)
+- [NIP-85: Trusted Assertions](85.md)
+- [NIP-86: Relay Management API](86.md)
+- [NIP-87: Cashu and Fedimint Discoverability](87.md)
+- [NIP-88: Polls](88.md)
+- [NIP-89: Recommended Application Handlers](89.md)
+- ~~[NIP-90: Data Vending Machines](90.md) --- **unrecommended**: this got totally out of control, prefer use-case-specific microstandards~~
+- [NIP-92: Media Attachments Metadata (`imeta`)](92.md)
+- [NIP-94: File Metadata](94.md)
+- ~~[NIP-96: HTTP File Storage Integration](96.md) --- **unrecommended**: replaced by Blossom~~
+- [NIP-98: HTTP Auth](98.md)
+- [NIP-99: Classified Listings](99.md)
+- [NIP-A0: Voice Messages](A0.md)
+- [NIP-A4: Public Messages](A4.md)
+- [NIP-B0: Web Bookmarks](B0.md)
+- [NIP-B7: Blossom](B7.md)
+- ~~[NIP-BE: Nostr BLE Communications Protocol](BE.md) --- **unrecommended**: only implemented once and unclear whether it works, requires review~~
+- [NIP-C0: Code Snippets](C0.md)
+- [NIP-C7: Chats](C7.md)
+- [NIP-A3: payto: Payment Targets](A3.md)
+- [NIP-CC: Geocaching](CC.md)
+- ~~[NIP-EE: E2EE Messaging using MLS Protocol](EE.md) --- **unrecommended**: superseded by the [Marmot Protocol](https://github.com/marmot-protocol/marmot)~~
+- [NIP-F4: Podcasts](F4.md)
 
-[NUD: Custom Feeds]: https://wikifreedia.xyz/cip-01/
+## Event Kinds
+
+This table is not exhaustive. For a machine-readable registry of all known event kinds prefer <https://github.com/nostr-protocol/registry-of-kinds> (or alternative registries following the same YAML schema).
+
+| kind          | description                     | NIP                                    |
+| ------------- | ------------------------------- | -------------------------------------- |
+| `0`           | User Metadata                   | [01](01.md)                            |
+| `1`           | Short Text Note                 | [10](10.md)                            |
+| `3`           | Follows                         | [02](02.md)                            |
+| `4`           | Encrypted Direct Messages       | [04](04.md)                            |
+| `5`           | Event Deletion Request          | [09](09.md)                            |
+| `6`           | Repost                          | [18](18.md)                            |
+| `7`           | Reaction                        | [25](25.md)                            |
+| `8`           | Badge Award                     | [58](58.md)                            |
+| `9`           | Chat Message                    | [C7](C7.md)                            |
+| `11`          | Thread                          | [7D](7D.md)                            |
+| `13`          | Seal                            | [59](59.md)                            |
+| `14`          | Direct Message                  | [17](17.md)                            |
+| `15`          | File Message                    | [17](17.md)                            |
+| `16`          | Generic Repost                  | [18](18.md)                            |
+| `17`          | Reaction to a website           | [25](25.md)                            |
+| `20`          | Picture                         | [68](68.md)                            |
+| `21`          | Video Event                     | [71](71.md)                            |
+| `22`          | Short-form Portrait Video Event | [71](71.md)                            |
+| `24`          | Public Message                  | [A4](A4.md)                            |
+| `30`          | internal reference              | [NKBIP-03]                             |
+| `31`          | external web reference          | [NKBIP-03]                             |
+| `32`          | hardcopy reference              | [NKBIP-03]                             |
+| `33`          | prompt reference                | [NKBIP-03]                             |
+| `40`          | Channel Creation                | [28](28.md)                            |
+| `41`          | Channel Metadata                | [28](28.md)                            |
+| `42`          | Channel Message                 | [28](28.md)                            |
+| `43`          | Channel Hide Message            | [28](28.md)                            |
+| `44`          | Channel Mute User               | [28](28.md)                            |
+| `54`          | Podcast Episode                 | [F4](F4.md)                            |
+| `62`          | Request to Vanish               | [62](62.md)                            |
+| `64`          | Chess (PGN)                     | [64](64.md)                            |
+| `78`          | Application-specific Data       | [78](78.md)                            |
+| `443`         | KeyPackage                      | [Marmot](marmot)                       |
+| `444`         | Welcome Message                 | [Marmot](marmot)                       |
+| `445`         | Group Event                     | [Marmot](marmot)                       |
+| `818`         | Merge Requests                  | [54](54.md)                            |
+| `1018`        | Poll Response                   | [88](88.md)                            |
+| `1021`        | Bid                             | [15](15.md)                            |
+| `1022`        | Bid confirmation                | [15](15.md)                            |
+| `1234`        | Draft Checkpoint                | [37](37.md)                            |
+| `1040`        | OpenTimestamps                  | [03](03.md)                            |
+| `1059`        | Gift Wrap                       | [59](59.md)                            |
+| `1063`        | File Metadata                   | [94](94.md)                            |
+| `1068`        | Poll                            | [88](88.md)                            |
+| `1111`        | Comment                         | [22](22.md)                            |
+| `1222`        | Voice Message                   | [A0](A0.md)                            |
+| `1244`        | Voice Message Comment           | [A0](A0.md)                            |
+| `1311`        | Live Chat Message               | [53](53.md)                            |
+| `1337`        | Code Snippet                    | [C0](C0.md)                            |
+| `1617`        | Patches                         | [34](34.md)                            |
+| `1618`        | Pull Requests                   | [34](34.md)                            |
+| `1619`        | Pull Request Updates            | [34](34.md)                            |
+| `1621`        | Issues                          | [34](34.md)                            |
+| `1622`        | Git Replies (deprecated)        | [34](34.md)                            |
+| `1630`-`1633` | Status                          | [34](34.md)                            |
+| `1971`        | Problem Tracker                 | [nostrocket][nostrocket]               |
+| `1984`        | Reporting                       | [56](56.md)                            |
+| `1985`        | Label                           | [32](32.md)                            |
+| `1987`        | AI Embeddings / Vector lists    | [NKBIP-02]                             |
+| `2003`        | Torrent                         | [35](35.md)                            |
+| `2004`        | Torrent Comment                 | [35](35.md)                            |
+| `2022`        | Coinjoin Pool                   | [joinstr][joinstr]                     |
+| `4550`        | Community Post Approval         | [72](72.md)                            |
+| `7374`        | Reserved Cashu Wallet Tokens    | [60](60.md)                            |
+| `7375`        | Cashu Wallet Tokens             | [60](60.md)                            |
+| `7376`        | Cashu Wallet History            | [60](60.md)                            |
+| `7516`        | Geocache log                    | [CC](CC.md)                            |
+| `7517`        | Geocache proof of find          | [CC](CC.md)                            |
+| `8000`        | Add User                        | [43](43.md)                            |
+| `8001`        | Remove User                     | [43](43.md)                            |
+| `9000`-`9030` | Group Control Events            | [29](29.md)                            |
+| `9041`        | Zap Goal                        | [75](75.md)                            |
+| `9321`        | Nutzap                          | [61](61.md)                            |
+| `9734`        | Zap Request                     | [57](57.md)                            |
+| `9735`        | Zap                             | [57](57.md)                            |
+| `9802`        | Highlights                      | [84](84.md)                            |
+| `10000`       | Mute list                       | [51](51.md)                            |
+| `10001`       | Pin list                        | [51](51.md)                            |
+| `10002`       | Relay List Metadata             | [65](65.md), [51](51.md)               |
+| `10003`       | Bookmark list                   | [51](51.md)                            |
+| `10004`       | Communities list                | [51](51.md)                            |
+| `10005`       | Public chats list               | [51](51.md)                            |
+| `10006`       | Blocked relays list             | [51](51.md)                            |
+| `10007`       | Search relays list              | [51](51.md)                            |
+| `10008`       | Profile Badges                  | [51](51.md), [58](58.md)               |
+| `10009`       | User groups                     | [51](51.md), [29](29.md)               |
+| `10011`       | External Identities             | [39](39.md)                            |
+| `10012`       | Favorite relays list            | [51](51.md)                            |
+| `10013`       | Private event relay list        | [37](37.md)                            |
+| `10015`       | Interests list                  | [51](51.md)                            |
+| `10019`       | Nutzap Mint Recommendation      | [61](61.md)                            |
+| `10020`       | Media follows                   | [51](51.md)                            |
+| `10030`       | User emoji list                 | [51](51.md)                            |
+| `10050`       | Relay list to receive DMs       | [51](51.md), [17](17.md)               |
+| `10051`       | KeyPackage Relays List          | [Marmot][marmot]                       |
+| `10054`       | Favorite podcasts list          | [51](51.md)                            |
+| `10063`       | User server list                | [B7](B7.md)                            |
+| `10064`       | Authored podcasts list          | [51](51.md)                            |
+| `10096`       | File storage server list        | [96](96.md) (deprecated)               |
+| `10133`       | Payment Targets                 | [A3](A3.md)                            |
+| `10154`       | Podcast Metadata                | [F4](F4.md)                            |
+| `10166`       | Relay Monitor Announcement      | [66](66.md)                            |
+| `10312`       | Room Presence                   | [53](53.md)                            |
+| `13194`       | Wallet Info                     | [47](47.md)                            |
+| `13534`       | Membership Lists                | [43](43.md)                            |
+| `5128`        | nsite manifest snapshot         | [5A](5A.md)                            |
+| `15128`       | Root nsite manifest             | [5A](5A.md)                            |
+| `17375`       | Cashu Wallet Event              | [60](60.md)                            |
+| `22242`       | Client Authentication           | [42](42.md)                            |
+| `23194`       | Wallet Request                  | [47](47.md)                            |
+| `23195`       | Wallet Response                 | [47](47.md)                            |
+| `24133`       | Nostr Connect                   | [46](46.md)                            |
+| `24242`       | Blobs stored on mediaservers    | [B7](B7.md)                            |
+| `27235`       | HTTP Auth                       | [98](98.md)                            |
+| `28934`       | Join Request                    | [43](43.md)                            |
+| `28935`       | Invite Request                  | [43](43.md)                            |
+| `28936`       | Leave Request                   | [43](43.md)                            |
+| `30000`       | Follow sets                     | [51](51.md)                            |
+| `30002`       | Relay sets                      | [51](51.md)                            |
+| `30003`       | Bookmark sets                   | [51](51.md)                            |
+| `30004`       | Curation sets                   | [51](51.md)                            |
+| `30005`       | Video sets                      | [51](51.md)                            |
+| `30006`       | Picture sets                    | [51](51.md)                            |
+| `30007`       | Kind mute sets                  | [51](51.md)                            |
+| `30008`       | Badge sets                      | [51](51.md), [58](58.md)               |
+| `30009`       | Badge Definition                | [58](58.md)                            |
+| `30015`       | Interest sets                   | [51](51.md)                            |
+| `30017`       | Create or update a stall        | [15](15.md)                            |
+| `30018`       | Create or update a product      | [15](15.md)                            |
+| `30019`       | Marketplace UI/UX               | [15](15.md)                            |
+| `30020`       | Product sold as an auction      | [15](15.md)                            |
+| `30023`       | Long-form Content               | [23](23.md)                            |
+| `30024`       | Draft Long-form Content         | [23](23.md)                            |
+| `30030`       | Emoji sets                      | [51](51.md)                            |
+| `30040`       | Curated Publication Index       | [NKBIP-01]                             |
+| `30041`       | Curated Publication Content     | [NKBIP-01]                             |
+| `30063`       | Release artifact sets           | [51](51.md)                            |
+| `30078`       | Application-specific Data       | [78](78.md)                            |
+| `30166`       | Relay Discovery                 | [66](66.md)                            |
+| `30267`       | App curation sets               | [51](51.md)                            |
+| `30311`       | Live Event                      | [53](53.md)                            |
+| `30312`       | Interactive Room                | [53](53.md)                            |
+| `30313`       | Conference Event                | [53](53.md)                            |
+| `30315`       | User Statuses                   | [38](38.md)                            |
+| `30382`       | User Trusted Assertion          | [85](85.md)                            |
+| `30383`       | Event Trusted Assertion         | [85](85.md)                            |
+| `30384`       | Addressable Trusted Assertion   | [85](85.md)                            |
+| `30402`       | Classified Listing              | [99](99.md)                            |
+| `30403`       | Draft Classified Listing        | [99](99.md)                            |
+| `30617`       | Repository announcements        | [34](34.md)                            |
+| `30618`       | Repository state announcements  | [34](34.md)                            |
+| `30818`       | Wiki article                    | [54](54.md)                            |
+| `30819`       | Redirects                       | [54](54.md)                            |
+| `31234`       | Draft Event                     | [37](37.md)                            |
+| `31922`       | Date-Based Calendar Event       | [52](52.md)                            |
+| `31923`       | Time-Based Calendar Event       | [52](52.md)                            |
+| `31924`       | Calendar                        | [52](52.md)                            |
+| `31925`       | Calendar Event RSVP             | [52](52.md)                            |
+| `31989`       | Handler recommendation          | [89](89.md)                            |
+| `31990`       | Handler information             | [89](89.md)                            |
+| `32267`       | Software Application            |                                        |
+| `34235`       | Addressable Video Event         | [71](71.md)                            |
+| `34236`       | Addressable Short Video Event   | [71](71.md)                            |
+| `34550`       | Community Definition            | [72](72.md)                            |
+| `34128`       | Legacy nsite manifest           | [5A](5A.md) (deprecated)               |
+| `35128`       | Named nsite manifest            | [5A](5A.md)                            |
+| `38172`       | Cashu Mint Announcement         | [87](87.md)                            |
+| `38173`       | Fedimint Announcement           | [87](87.md)                            |
+| `37516`       | Geocache Listing                | [CC](CC.md)                            |
+| `37517`       | Geocache Curation List          | [CC](CC.md)                            |
+| `38383`       | Peer-to-peer Order events       | [69](69.md)                            |
+| `39000-9`     | Group metadata events           | [29](29.md)                            |
+| `39089`       | Starter packs                   | [51](51.md)                            |
+| `39092`       | Media starter packs             | [51](51.md)                            |
+| `39701`       | Web bookmarks                   | [B0](B0.md)                            |
+>>>>>>> upstream/master
+
 [nostrocket]: https://github.com/nostrocket/NIPS/blob/main/Problems.md
-[lnpub]: https://github.com/shocknet/Lightning.Pub/blob/master/proto/autogenerated/client.md
-[cornychat-slideset]: https://cornychat.com/datatypes#kind30388slideset
-[cornychat-linkset]: https://cornychat.com/datatypes#kind31388linkset
 [joinstr]: https://gitlab.com/1440000bytes/joinstr/-/blob/main/NIP.md
-[NKBIP-01]: https://wikistr.com/nkbip-01
-[NKBIP-02]: https://wikistr.com/nkbip-02
-[blossom]: https://github.com/hzrd149/blossom
-[Tidal-nostr]: https://wikistr.com/tidal-nostr
+[NKBIP-01]: https://wikistr.com/nkbip-01*fd208ee8c8f283780a9552896e4823cc9dc6bfd442063889577106940fd927c1
+[NKBIP-02]: https://wikistr.com/nkbip-02*fd208ee8c8f283780a9552896e4823cc9dc6bfd442063889577106940fd927c1
+[NKBIP-03]: https://wikistr.com/nkbip-03*fd208ee8c8f283780a9552896e4823cc9dc6bfd442063889577106940fd927c1
+[marmot]: https://github.com/marmot-protocol/marmot
+
 
 ## メッセージ型
 
@@ -260,6 +548,7 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 | `AUTH`   | 認証チャレンジの送信                                    | [42](42.md) |
 | `COUNT`  | 要求されたイベントの計数結果                            | [45](45.md) |
 
+<<<<<<< HEAD
 新しいイベント種別(kind)を含むNIPsを提案する場合は、これらのリストも更新すること。
 
 ## 標準化済みタグ
@@ -358,6 +647,9 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 
 
 ## NIPsの受け入れ基準
+=======
+## Criteria for acceptance in this repository
+>>>>>>> upstream/master
 
 1. (適用可能であれば) 少なくとも2つのクライアントと1つのリレーが完全に実装しているべきである。
 2. 理にかなっている必要がある。
@@ -367,9 +659,15 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 
 ## このリポジトリは中央集権的な要素ではありませんか？
 
+<<<<<<< HEAD
 相互運用性を向上させるために誰もが従える標準を作成し、**後方互換性**を損なうことなく**物事を行うための1つの方法**を定義する必要がある。この目的のためには誰もが同じことに同意し、それら標準の中央集権型の目録を保持すること以外に道は無い。しかし、そのような目録があるからといってNostrの分散性が損なわれることはない。_中央の目録がプロトコルの要求を満たせない場合はいつでも異議を唱えることができ_、他の場所に移行して他の人がメンテナンスできる。
 
 フォークされ複数に分かれることも可能で、その際あるクライアントは一方に、別のクライアントはもう一方に、あるいは競合する両方の標準に準拠するクライアントもあるだろう。それはNostrの単純さ、開放性、相互運用性を少し損なうこととなるが、それでも短期的には全て機能するだろう。
+=======
+To promote interoperability, we need standards that everybody can follow, and we need them to define a **single way of doing each thing** without ever hurting **backwards-compatibility**, and for that purpose there is no way around getting everybody to agree on the same thing and keep a centralized index of these standards. However the fact that such an index exists doesn't hurt the decentralization of Nostr. _At any point the central index can be challenged if it is failing to fulfill the needs of the protocol_ and it can migrate to other places and be maintained by other people.
+
+It can even fork into multiple versions, and then some clients would go one way, others would go another way, and some clients would adhere to both competing standards. This would hurt the simplicity, openness and interoperability of Nostr a little, but everything would still work in the short term.
+>>>>>>> upstream/master
 
 このリポジトリへのコミット権を持っている著名なNostrソフトウェア開発者のリストがあるが、それはほとんど実用上の理由から存在している。私達が扱っているものの性質上、リポジトリの所有者はメンバーシップを取り消したり好きなように歴史を書き換えることができる。そして、それらの行為が不当であったり、悪事や邪悪なものと認識される場合、コミュニティは抗議の声を上げなければならない。
 
@@ -379,11 +677,15 @@ NIPsは、**Nostr Implementation Possibilities**の略称である。
 
 物事を標準化するためにこれら2つの方法がこのリポジトリでサポートされている。後者が望ましいが、このリポジトリの外で出現した標準をNIPに成文化し、後の人が参照して簡単に理解し実装できるようにする取り組みも行われる。しかし、他の人間のシステムと同様に、標準が有害であると考えられる場合に裁量が行われることは明らかである。
 
+<<<<<<< HEAD
 ## 破壊的変更
 
 [Breaking Changes](BREAKING.md)
 
 ## ライセンス
+=======
+## License
+>>>>>>> upstream/master
 
 全てのNIPsはパブリックドメインである。
 
